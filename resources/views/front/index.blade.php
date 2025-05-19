@@ -663,7 +663,7 @@
 
 
     {{-- gallery --}}
-<div>
+{{-- <div>
     <h1 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">Gallery</h1>
 
 
@@ -721,7 +721,140 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+
+<!-- Tabs Filter Section -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Jewellery Collection</h2>
+
+      <!-- Tabs -->
+      <div class="flex flex-wrap justify-center gap-4 mb-10">
+        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 active-tab" data-category="all">All</button>
+        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" data-category="rings">Rings</button>
+        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" data-category="necklaces">Necklaces</button>
+        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" data-category="earrings">Earrings</button>
+        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" data-category="bracelets">Bracelets</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="productGrid">
+        <!-- Ring -->
+        <div class="product-card" data-category="rings">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Ring" class="w-full">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800">Diamond Ring</h3>
+              <p class="text-gray-500 mt-1">₹ 25,000</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Necklace -->
+        <div class="product-card" data-category="necklaces">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Necklace" class="w-full">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800">Gold Necklace</h3>
+              <p class="text-gray-500 mt-1">₹ 48,000</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earring -->
+        <div class="product-card" data-category="earrings">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Earring" class="w-full">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800">Pearl Earrings</h3>
+              <p class="text-gray-500 mt-1">₹ 15,000</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bracelet -->
+        <div class="product-card" data-category="bracelets">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Bracelet" class="w-full">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800">Charm Bracelet</h3>
+              <p class="text-gray-500 mt-1">₹ 12,500</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="rings">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+              <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Ring" class="w-full">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">Diamond Ring</h3>
+                <p class="text-gray-500 mt-1">₹ 25,000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Necklace -->
+          <div class="product-card" data-category="necklaces">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+              <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Necklace" class="w-full">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">Gold Necklace</h3>
+                <p class="text-gray-500 mt-1">₹ 48,000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Earring -->
+          <div class="product-card" data-category="earrings">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+              <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Earring" class="w-full">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">Pearl Earrings</h3>
+                <p class="text-gray-500 mt-1">₹ 15,000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bracelet -->
+          <div class="product-card" data-category="bracelets">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+              <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Bracelet" class="w-full">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">Charm Bracelet</h3>
+                <p class="text-gray-500 mt-1">₹ 12,500</p>
+              </div>
+            </div>
+          </div>
+
+        <!-- Duplicate a few more items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const products = document.querySelectorAll('.product-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const category = tab.getAttribute('data-category');
+
+        // Highlight active tab
+        tabs.forEach(btn => btn.classList.remove('bg-gray-800', 'text-white', 'active-tab'));
+        tab.classList.add('bg-gray-800', 'text-white');
+
+        // Filter products
+        products.forEach(product => {
+          if (category === 'all' || product.getAttribute('data-category') === category) {
+            product.classList.remove('hidden');
+          } else {
+            product.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
 
 
 

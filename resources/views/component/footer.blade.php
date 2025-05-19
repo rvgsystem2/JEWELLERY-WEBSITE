@@ -6,7 +6,7 @@
 
         <!-- Company Info -->
         <div>
-          <h3 class="text-white text-lg font-semibold mb-4">Real Victory Groups</h3>
+          <h3 class="text-white text-lg font-semibold mb-4">R V jewellers</h3>
           <div class="flex items-start mb-3">
             <svg class="h-5 w-5 mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
@@ -24,7 +24,7 @@
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
             </svg>
-            <span>contact@realvictory.com</span>
+            <span>contact@rvjewellers.com</span>
           </div>
         </div>
 
@@ -69,7 +69,7 @@
 
     <!-- Bottom Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-      <p class="text-sm">&copy; 2025 Real Victory Groups. All rights reserved.</p>
+      <p class="text-sm">&copy; 2025 R V jewelers. All rights reserved.</p>
       <div class="flex space-x-5">
         <!-- Facebook -->
         <a href="#" class="hover:text-white transition" aria-label="Facebook">
@@ -91,5 +91,3 @@
     </div>
   </footer>
 
-  <!-- Font Awesome CDN (required for icons above) -->
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>

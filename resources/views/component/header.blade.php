@@ -26,7 +26,7 @@
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <!-- Logo -->
       <a href="#" class="text-2xl font-bold text-yellow-600 tracking-wide">
-        Victory<span class="text-gray-800">Jewels</span>
+        RV<span class="text-gray-800">Jewels</span>
       </a>
 
       <!-- Navigation -->
