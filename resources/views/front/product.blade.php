@@ -315,7 +315,7 @@
                         <i class="fas fa-chevron-left"></i>
                     </a>
                     <a href="#"
-                        class="px-4 py-2 border border-gold bg-gold text-white rounded-full font-medium">1</a>
+                        class="px-4 py-2 border border-gold bg-gold text-white ext-gray-600 rounded-full font-medium">1</a>
                     <a href="#"
                         class="px-4 py-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gold hover:text-white hover:border-gold">2</a>
                     <a href="#"
