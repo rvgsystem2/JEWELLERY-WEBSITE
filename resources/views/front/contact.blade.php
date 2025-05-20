@@ -1,52 +1,80 @@
-@include('front.header')
+@extends('component.main')
+@section('content')
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-yellow-100 to-yellow-50 py-16 text-center">
+    <h1 class="text-4xl font-bold text-yellow-800">Contact Us</h1>
+    <p class="mt-2 text-lg text-gray-600">We'd love to hear from you</p>
+  </section>
 
-    <div class="max-w-6xl mx-auto p-6 my-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 rounded-lg overflow-hidden">
-            
-            <!-- Contact Info -->
-            <section class="bg-gradient-to-r from-rose-300 to-indigo-200 text-black py-16 px-8 rounded-lg  max-w-2xl mx-auto">
-                <div class="text-center">
-                    <span class="text-sm font-semibold uppercase tracking-wider">Contact Us</span>
-                    <h2 class="text-4xl font-extrabold mt-2">We're here for you</h2>
-                    <p class="text-lg mt-4">Have a question or feedback? Reach out to us anytime!</p>
-                </div>
-            
-                <div class="mt-8 bg-white text-gray-900 p-6 rounded-lg shadow-md space-y-4">
-                    <div class="flex items-center gap-3">
-                        <span class="bg-rose-600 text-white p-2 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10l1.764-1.764a5.5 5.5 0 017.772 0L15 10m6 4l-1.764 1.764a5.5 5.5 0 01-7.772 0L9 14" />
-                            </svg>
-                        </span>
-                        <p class="text-lg font-medium">Call: <span class="font-semibold">+91 8234040750</span></p>
-                    </div>
-            
-                    <div class="flex items-center gap-3">
-                        <span class="bg-blue-600 text-white p-2 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m0 0h8m-8 0H8m0 0h8" />
-                            </svg>
-                        </span>
-                        <p class="text-lg font-medium">Mail: <a href="mailto:info@magicqr.in" class="text-blue-600 hover:underline">info@magicqr.in</a></p>
-                    </div>
-            
-                    <div class="flex items-center gap-3">
-                        <span class="bg-green-600 text-white p-2 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
-                            </svg>
-                        </span>
-                        <p class="text-lg font-semibold">WhatsApp Now!!</p>
-                    </div>
-                </div>
-            </section>
-            
+  <!-- Main Contact Section -->
+ <!-- Contact Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-12 px-6 md:px-16 bg-gray-50">
 
-            <!-- Google Map -->
-            <div class="h-[350px] md:h-auto">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25600690.93652534!2d62.87700123723788!3d11.545043367781213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1742627437309!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+    <!-- Contact Info -->
+    <div class="space-y-8">
+      <h2 class="text-3xl font-bold text-yellow-800">Get in Touch</h2>
+      <p class="text-gray-600">
+        Have questions about our jewellery collection, pricing, or customization? Reach out to us and we’ll get back to you soon.
+      </p>
 
+      <div class="space-y-6 text-gray-700">
+        <div>
+          <h3 class="font-semibold text-lg">Phone</h3>
+          <p class="text-gray-600">+91 98765 43210</p>
         </div>
+
+        <div>
+          <h3 class="font-semibold text-lg">Email</h3>
+          <p class="text-gray-600">info@royaljewels.com</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg">Address</h3>
+          <p class="text-gray-600">123 Gold Street, Zaveri Bazaar, Mumbai, India</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Contact Form -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg">
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+          <input type="text" id="name" name="name" required
+            class="mt-1 p-2 block w-full rounded-xl border border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+          <input type="email" id="email" name="email" required
+            class="mt-1 p-2 block w-full rounded-xl border border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500" />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" required
+            class="mt-1 p-2 block w-full rounded-xl border border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 px-6 rounded-xl font-semibold transition duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Map Section -->
+  <section class="px-4 pb-16 max-w-7xl mx-auto">
+    <h2 class="text-2xl font-semibold text-yellow-800 mb-4">Our Location</h2>
+    <div class="rounded-2xl overflow-hidden shadow-lg">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609730266!2d72.74109976427457!3d19.082197839073226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8a3e0e915f%3A0x1dbf3b05fdcbe3c!2sZaveri%20Bazaar!5e0!3m2!1sen!2sin!4v1629876543210!5m2!1sen!2sin"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+@endsection
 
