@@ -6,28 +6,26 @@
     <!-- Slider Section -->
     <div class="w-full relative">
         <div class="swiper default-carousel">
+            
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="h-64 md:h-96">
-                        <img src="https://img.freepik.com/free-psd/jewelry-template-design_23-2150694442.jpg?ga=GA1.1.1516777589.1747721461&semt=ais_hybrid&w=740" alt="Jewelry Box"
-                            class="w-full h-full object-cover ">
+                @forelse ($banners as $banner)
+                    <div class="swiper-slide">
+                        <div class="h-64 md:h-96">
+                            <img src="{{ asset('storage/' . $banner->image) }}" alt="{{ $banner->title }}"
+                                class="w-full h-full object-cover ">
+                        </div>
+                    </div>
+                    
+                @empty
+                   <div class="swiper-slide">
+                    <div class="h-64 md:h-96 flex items-center justify-center text-center text-gray-500">
+                        No banners found.
                     </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div class="h-64 md:h-96">
-                        <img src="https://img.freepik.com/free-psd/jewelry-template-design_23-2151693221.jpg?ga=GA1.1.1516777589.1747721461&semt=ais_hybrid&w=740" alt="Jewelry Display"
-                            class="w-full h-full object-cover ">
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="h-64 md:h-96">
-                        <img src="https://img.freepik.com/free-psd/celestial-style-jewelry-facebook-template_23-2150907812.jpg?ga=GA1.1.1516777589.1747721461&semt=ais_hybrid&w=740" alt="Ring"
-                            class="w-full h-full object-cover ">
-                    </div>
-                </div>
+                @endforelse
+               
+              
             </div>
 
             <!-- Navigation Buttons -->
@@ -660,23 +658,28 @@
  {{-- about -us --}}
 
  <div class="container mx-auto px-8 py-12 max-w-full rounded-lg">
-    <div class="flex flex-col md:flex-row items-center bg-white  overflow-hidden">
+   @forelse ($abouts as $about)
+        <div class="flex flex-col md:flex-row items-center bg-white  overflow-hidden">
         <div class="md:w-1/2 p-8 md:p-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">About us</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ $about->title }}</h2>
             <p class="text-gray-600 mb-6 text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, neque! Nostrum totam voluptatum
-                temporibus rerum repellat facilis, nulla recusandae minus. Nemo doloremque omnis modi deleniti.
-                Accusantium at deserunt eos. Magnam?
+                {{ $about->sub_title }}
             </p>
-            <a href="#"
+            <p class="text-gray-600 mb-6 text-lg">
+                {{ $about->description }}
+            </p>
+            <a href="{{ route('about') }}"
                 class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-1">Learn
                 More</a>
         </div>
         <div class="md:w-1/2 rounded-lg">
-            <img src="https://cdn.pixabay.com/photo/2017/03/05/19/54/chain-2119611_1280.jpg"
+            <img src="{{ asset('storage/' . $about->image) }}"
                 alt="Chain links representing connection" class="w-full h-full object-cover rounded-xl">
         </div>
     </div>
+   @empty
+       <p class="text-gray-600 mb-6 text-lg">No about us information available.</p>
+   @endforelse
 </div>
 
     {{-- why us --}}
@@ -695,70 +698,23 @@
 
   <div class="mt-10 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     <!-- Feature 1 -->
-    <div class="flex items-start space-x-4">
-      <span class="material-symbols-outlined text-amber-600 text-4xl">diamond</span>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-800">Premium Quality</h3>
-        <p class="text-gray-600 text-sm">
-          We use only the finest metals and gemstones, ensuring long-lasting beauty and brilliance.
-        </p>
-      </div>
-    </div>
+    @forelse ($aboutfeatures as $feature)
+      <div class="flex items-start space-x-4">
+      <span class="{{ $feature->icon }} text-yellow-500 text-4xl"></span>
 
-    <!-- Feature 2 -->
-    <div class="flex items-start space-x-4">
-      <span class="material-symbols-outlined text-amber-600 text-4xl">verified</span>
       <div>
-        <h3 class="text-xl font-semibold text-gray-800">Certified Authenticity</h3>
+        <h3 class="text-xl font-semibold text-gray-800">{{ $feature->title }}</h3>
         <p class="text-gray-600 text-sm">
-          All our products come with authenticity certification for your complete peace of mind.
+          {{ $feature->subtitle }}
         </p>
       </div>
     </div>
+    @empty
+    <p class="text-gray-600">No features available.</p>
+    @endforelse
+ 
 
-    <!-- Feature 3 -->
-    <div class="flex items-start space-x-4">
-      <span class="material-symbols-outlined text-amber-600 text-4xl">design_services</span>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-800">Custom Designs</h3>
-        <p class="text-gray-600 text-sm">
-          Create your own signature pieces with our expert jewellery designers and artisans.
-        </p>
-      </div>
-    </div>
-
-    <!-- Feature 4 -->
-    <div class="flex items-start space-x-4">
-      <span class="material-symbols-outlined text-amber-600 text-4xl">support_agent</span>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-800">Dedicated Support</h3>
-        <p class="text-gray-600 text-sm">
-          Our customer support team is always available to guide and assist you with your queries.
-        </p>
-      </div>
-    </div>
-
-    <!-- Feature 5 -->
-    <div class="flex items-start space-x-4">
-      <span class="material-symbols-outlined text-amber-600 text-4xl">local_shipping</span>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-800">Fast & Secure Delivery</h3>
-        <p class="text-gray-600 text-sm">
-          We ensure timely delivery with 100% safety, right to your doorstep.
-        </p>
-      </div>
-    </div>
-
-    <!-- Feature 6 -->
-    <div class="flex items-start space-x-4">
-      <span class="material-symbols-outlined text-amber-600 text-4xl">thumb_up</span>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-800">Trusted by Thousands</h3>
-        <p class="text-gray-600 text-sm">
-          Our jewellery is loved and recommended by customers worldwide for its beauty and value.
-        </p>
-      </div>
-    </div>
+   
   </div>
 </section>
 
