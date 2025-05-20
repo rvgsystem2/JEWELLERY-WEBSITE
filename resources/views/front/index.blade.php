@@ -74,7 +74,7 @@
                         <h3 class="text-lg font-semibold text-gray-800">{{ $category->name }}</h3>
                         <p class="text-sm text-gray-500 mt-1">{{ $category->title }}</p>
                     </div>
-                    
+
                 @empty
                     <div class="col-span-1">
                         <p class="text-gray-500">No categories found.</p>
@@ -88,7 +88,7 @@
                     <p class="text-sm text-gray-500 mt-1">Elegant designs to shine</p>
                 </div> --}}
 
-              
+
 
             </div>
         </div>
@@ -96,580 +96,368 @@
 
 
     {{-- products --}}
-    <style>
-        .slider-container {
-            scroll-behavior: smooth;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
 
-        .slider-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        .card-shadow {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card-shadow:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-
-        .badge-new {
-            background-color: #f59e0b;
-        }
-
-        .badge-sale {
-            background-color: #10b981;
-        }
-
-        .badge-popular {
-            background-color: #8b5cf6;
-        }
-
-        .badge-bestseller {
-            background-color: #ef4444;
-        }
-    </style>
-
-    <div class="container mx-auto md:px-12 py-8 mx-4" x-data="productSlider()" x-init="init()">
-        <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 ">Featured Jewelry Collection</h2>
-            <div class="flex space-x-2">
-                <button @click="scroll('left')"
-                    class="p-2 bg-white rounded-full shadow hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
-                    aria-label="Scroll left" :disabled="activeIndex === 0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" :class="{ 'opacity-50': activeIndex === 0 }">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button @click="scroll('right')"
-                    class="p-2 bg-white rounded-full shadow hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
-                    aria-label="Scroll right" :disabled="activeIndex >= totalCards - cardsToShow">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor"
-                        :class="{ 'opacity-50': activeIndex >= totalCards - cardsToShow }">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
+    <div class="container mx-auto md:px-12 py-8 px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-6">Featured Jewelry Collection</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Premium Gold Necklace"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
+                        NEW
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Premium Gold Necklace</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <!-- Star icons -->
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">24 reviews</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900">$299.99</span>
+                        <a href="{{ route('detail') }}">
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Repeat similar structure for other products -->
+            <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Silver Charm Bracelet"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
+                        SALE
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Silver Charm Bracelet</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">42 reviews</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable charm options.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900">$149.99</span>
+                        <a href="{{ route('detail') }}">
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Premium Gold Necklace"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
+                        NEW
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Premium Gold Necklace</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <!-- Star icons -->
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">24 reviews</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900">$299.99</span>
+                        <a href="{{ route('detail') }}">
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar structure for other products -->
+            <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Silver Charm Bracelet"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
+                        SALE
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Silver Charm Bracelet</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">42 reviews</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable charm options.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900">$149.99</span>
+                        <a href="{{ route('detail') }}">
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Premium Gold Necklace"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
+                        NEW
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Premium Gold Necklace</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <!-- Star icons -->
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">24 reviews</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900">$299.99</span>
+                        <a href="{{ route('detail') }}">
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar structure for other products -->
+            <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Silver Charm Bracelet"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
+                        SALE
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Silver Charm Bracelet</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">42 reviews</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable charm options.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900">$149.99</span>
+                        <a href="{{ route('detail') }}">
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Premium Gold Necklace"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
+                        NEW
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Premium Gold Necklace</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <!-- Star icons -->
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">24 reviews</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900">$299.99</span>
+                        <a href="{{ route('detail') }}">
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar structure for other products -->
+            <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Silver Charm Bracelet"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
+                        SALE
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Silver Charm Bracelet</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">42 reviews</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable charm options.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900">$149.99</span>
+                        <a href="{{ route('detail') }}">
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="relative overflow-hidden">
-            <div class="slider-container flex overflow-x-auto gap-4 pb-4" x-ref="slider">
-                <!-- Product Card 1 -->
-                <div class="flex-shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] fade-in"
-                    style="animation-delay: 0ms;">
-                    <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col mx-2 sm:mx-0">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
-                                alt="Premium Gold Necklace"
-                                class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
-                                NEW
-                            </div>
-                        </div>
-                        <div class="p-4 flex flex-col flex-grow">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Premium Gold Necklace</h3>
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <!-- Star icons -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <!-- Repeat for 5 stars -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                </div>
-                                <span class="text-sm text-gray-500 ml-2">24 reviews</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium
-                                gemstone accents.</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-xl font-bold text-gray-900">$299.99</span>
-                                <a href="{{ route('detail') }}"> <button
-                                        class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                        aria-label="Add Silver Charm Bracelet to cart">
-                                        View Details
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="flex-shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] fade-in"
-                    style="animation-delay: 100ms;">
-                    <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col mx-2 sm:mx-0">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
-                                alt="Silver Charm Bracelet"
-                                class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
-                                SALE
-                            </div>
-                        </div>
-                        <div class="p-4 flex flex-col flex-grow">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Silver Charm Bracelet</h3>
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <!-- Star icons -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <!-- Repeat for 5 stars -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                </div>
-                                <span class="text-sm text-gray-500 ml-2">42 reviews</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with
-                                customizable charm options.</p>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <span class="text-xl font-bold text-gray-900">$149.99</span>
-                                    <span class="text-sm text-gray-500 line-through ml-2">$199.99</span>
-                                    <a href="{{ route('detail') }}"> <button
-                                            class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                            aria-label="Add Silver Charm Bracelet to cart">
-                                            View Details
-                                        </button></a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="flex-shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] fade-in"
-                    style="animation-delay: 200ms;">
-                    <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col mx-2 sm:mx-0">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
-                                alt="Diamond Stud Earrings"
-                                class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                        </div>
-                        <div class="p-4 flex flex-col flex-grow">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Diamond Stud Earrings</h3>
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <!-- Star icons -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <!-- Repeat for 5 stars -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current text-gray-400" viewBox="0 0 24 24"
-                                        aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                </div>
-                                <span class="text-sm text-gray-500 ml-2">18 reviews</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Classic diamond stud earrings with premium
-                                quality stones.</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-xl font-bold text-gray-900">$89.99</span>
-                                <a href="{{ route('detail') }}"> <button
-                                        class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                        aria-label="Add Diamond Stud Earrings to cart">
-                                        View Details
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 4 -->
-                <div class="flex-shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] fade-in"
-                    style="animation-delay: 300ms;">
-                    <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col mx-2 sm:mx-0">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
-                                alt="Platinum Engagement Ring"
-                                class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 right-4 badge-popular text-white text-xs font-bold px-2 py-1 rounded-full">
-                                POPULAR
-                            </div>
-                        </div>
-                        <div class="p-4 flex flex-col flex-grow">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Platinum Engagement Ring</h3>
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <!-- Star icons -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <!-- Repeat for 5 stars -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current text-gray-400" viewBox="0 0 24 24"
-                                        aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                </div>
-                                <span class="text-sm text-gray-500 ml-2">56 reviews</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Exquisite platinum engagement ring with
-                                brilliant-cut diamond.</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-xl font-bold text-gray-900">$1,299.99</span>
-                                <a href="{{ route('detail') }}"> <button
-                                        class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                        aria-label="Add Platinum Engagement Ring to cart">
-                                        View Details
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 5 -->
-                <div class="flex-shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] fade-in"
-                    style="animation-delay: 400ms;">
-                    <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col mx-2 sm:mx-0">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
-                                alt="Gold Bangles Set"
-                                class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                        </div>
-                        <div class="p-4 flex flex-col flex-grow">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Gold Bangles Set</h3>
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <!-- Star icons -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <!-- Repeat for 5 stars -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                </div>
-                                <span class="text-sm text-gray-500 ml-2">32 reviews</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Set of three intricately designed 14k gold
-                                bangles.</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-xl font-bold text-gray-900">$179.99</span>
-                                <a href="{{ route('detail') }}"> <button
-                                        class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                        aria-label="Add Gold Bangles Set to cart">
-                                        View Details
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 6 -->
-                <div class="flex-shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] fade-in"
-                    style="animation-delay: 500ms;">
-                    <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col mx-2 sm:mx-0">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
-                                alt="Diamond Nose Ring"
-                                class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 right-4 badge-bestseller text-white text-xs font-bold px-2 py-1 rounded-full">
-                                BEST SELLER
-                            </div>
-                        </div>
-                        <div class="p-4 flex flex-col flex-grow">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Diamond Nose Ring</h3>
-                            <div class="flex items-center mb-2">
-                                <div class="flex text-yellow-400">
-                                    <!-- Star icons -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <!-- Repeat for 5 stars -->
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path
-                                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
-                                </div>
-                                <span class="text-sm text-gray-500 ml-2">78 reviews</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant diamond nose ring with secure
-                                screw-back closure.</p>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <span class="text-xl font-bold text-gray-900">$79.99</span>
-                                    <span class="text-sm text-gray-500 line-through ml-2">$99.99</span>
-                                </div>
-                                <a href="{{ route('detail') }}"> <button
-                                        class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                        aria-label="Add Gold Bangles Set to cart">
-                                        View Details
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Progress indicator dots -->
-            <div class="flex justify-center mt-6 space-x-2">
-                <template x-for="(_, index) in Math.ceil(totalCards / cardsToShow)" :key="index">
-                    <button @click="scrollToCard(index * cardsToShow)"
-                        :class="{ 'bg-amber-500 w-4': activeIndex >= index * cardsToShow && activeIndex < (index + 1) *
-                                cardsToShow, 'bg-gray-300 w-3': !(activeIndex >= index * cardsToShow && activeIndex < (
-                                index + 1) * cardsToShow) }"
-                        class="h-3 rounded-full transition-all duration-300 focus:outline-none"
-                        :aria-label="`Go to slide ${index + 1}`">
-                    </button>
-                </template>
-            </div>
-        </div>
+  <!-- View More Button -->
+  <div class="text-center mt-12">
+    <button class="px-8 py-3 border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white rounded-full font-medium transition-all duration-300 inline-flex items-center">
+      View All Collections
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </button>
+  </div>
     </div>
 
-    <script>
-        function productSlider() {
-            return {
-                activeIndex: 0,
-                totalCards: 0,
-                cardsToShow: 4,
-                isScrolling: false,
-                sliderWidth: 0,
-                cardWidth: 0,
-                gap: 16,
-                loop: true,
 
-                updateCardsToShow() {
-                    if (window.innerWidth < 640) {
-                        this.cardsToShow = 1;
-                    } else if (window.innerWidth < 1024) {
-                        this.cardsToShow = 2;
-                    } else {
-                        this.cardsToShow = 4;
-                    }
-                },
-
-                calculateDimensions() {
-                    const slider = this.$refs.slider;
-                    if (!slider || !slider.children.length) return;
-
-                    this.sliderWidth = slider.offsetWidth;
-                    this.cardWidth = slider.children[0].offsetWidth + this.gap;
-                    this.totalCards = slider.children.length;
-                },
-
-                scroll(direction) {
-                    if (this.isScrolling) return;
-                    this.isScrolling = true;
-
-                    const slider = this.$refs.slider;
-                    this.calculateDimensions();
-
-                    let scrollAmount = this.cardWidth * this.cardsToShow;
-
-                    if (direction === 'left') {
-                        this.activeIndex--;
-                        slider.scrollBy({
-                            left: -scrollAmount,
-                            behavior: 'smooth'
-                        });
-                    } else if (direction === 'right') {
-                        this.activeIndex++;
-                        slider.scrollBy({
-                            left: scrollAmount,
-                            behavior: 'smooth'
-                        });
-                    }
-
-                    setTimeout(() => {
-                        // Handle loop jump (without animation)
-                        if (this.activeIndex >= this.totalCards - this.cardsToShow) {
-                            this.activeIndex = this.cardsToShow;
-                            slider.scrollLeft = this.cardWidth * this.activeIndex;
-                        }
-
-                        if (this.activeIndex < this.cardsToShow) {
-                            this.activeIndex = this.totalCards - this.cardsToShow * 2;
-                            slider.scrollLeft = this.cardWidth * this.activeIndex;
-                        }
-
-                        this.isScrolling = false;
-                    }, 500);
-                },
-
-                scrollToCard(index) {
-                    if (this.isScrolling) return;
-                    this.isScrolling = true;
-
-                    const slider = this.$refs.slider;
-                    this.calculateDimensions();
-
-                    this.activeIndex = Math.max(0, Math.min(index, this.totalCards - 1));
-                    const scrollPosition = this.activeIndex * this.cardWidth;
-
-                    slider.scrollTo({
-                        left: scrollPosition,
-                        behavior: 'smooth'
-                    });
-
-                    setTimeout(() => {
-                        this.isScrolling = false;
-                    }, 500);
-                },
-
-                cloneSlides() {
-                    const slider = this.$refs.slider;
-                    if (!slider || !slider.children.length) return;
-
-                    const cards = Array.from(slider.children);
-                    const prepend = cards.slice(-this.cardsToShow).map(card => card.cloneNode(true));
-                    const append = cards.slice(0, this.cardsToShow).map(card => card.cloneNode(true));
-
-                    // Prepend and append clones
-                    prepend.forEach(clone => slider.prepend(clone));
-                    append.forEach(clone => slider.appendChild(clone));
-                },
-
-                updateActiveIndex() {
-                    const slider = this.$refs.slider;
-                    if (!slider) return;
-
-                    this.calculateDimensions();
-                    const scrollPosition = slider.scrollLeft;
-                    this.activeIndex = Math.round(scrollPosition / this.cardWidth);
-                },
-
-                handleResize() {
-                    this.updateCardsToShow();
-                    this.calculateDimensions();
-                    this.scrollToCard(this.activeIndex);
-                },
-
-                init() {
-                    this.updateCardsToShow();
-                    this.cloneSlides(); // add clones
-                    this.calculateDimensions();
-
-                    const slider = this.$refs.slider;
-                    if (!slider) return;
-
-                    // Set initial scroll to the first real slide (after prepended clones)
-                    this.activeIndex = this.cardsToShow;
-                    slider.scrollLeft = this.cardWidth * this.activeIndex;
-
-                    slider.addEventListener('scroll', () => {
-                        if (!this.isScrolling) {
-                            this.updateActiveIndex();
-                        }
-                    });
-
-                    window.addEventListener('resize', () => this.handleResize());
-                }
-            };
-        }
-    </script>
 
 
     {{-- about -us --}}

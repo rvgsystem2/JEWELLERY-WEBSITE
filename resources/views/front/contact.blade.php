@@ -20,7 +20,9 @@
       <div class="space-y-6 text-gray-700">
         <div>
           <h3 class="font-semibold text-lg">Phone</h3>
-          <p class="text-gray-600">+91 98765 43210</p>
+          <p class="text-gray-600">8707656944
+
+            , 9389859821
         </div>
 
         <div>

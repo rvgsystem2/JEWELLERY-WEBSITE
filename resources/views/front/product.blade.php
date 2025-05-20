@@ -204,15 +204,6 @@
     </div>
   </div>
 
-  <!-- View More Button -->
-  <div class="text-center mt-12">
-    <button class="px-8 py-3 border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white rounded-full font-medium transition-all duration-300 inline-flex items-center">
-      View All Collections
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-      </svg>
-    </button>
-  </div>
 </section>
 
 <!-- JavaScript for Interactive Elements -->
