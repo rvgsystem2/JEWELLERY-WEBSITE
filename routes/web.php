@@ -99,6 +99,15 @@ Route::middleware('auth')->group(function () {
     Route::get('collection/edit/{collection}',[App\Http\Controllers\collectionController::class,'edit'])->name('collection.edit');
     Route::post('collection/update/{collection}',[App\Http\Controllers\collectionController::class,'update'])->name('collection.update');
     Route::get('collection/delete/{collection}',[App\Http\Controllers\collectionController::class,'delete'])->name('collection.delete');
+
+//category Routes
+    Route::get('category/index',[App\Http\Controllers\CategoryController::class,'index'])->name('category.index');
+    Route::get('category/create',[App\Http\Controllers\CategoryController::class,'create'])->name('category.create');
+    Route::post('category/store',[App\Http\Controllers\CategoryController::class,'store'])->name('category.store');
+    Route::get('category/edit/{category}',[App\Http\Controllers\CategoryController::class,'edit'])->name('category.edit');
+    Route::post('category/update/{category}',[App\Http\Controllers\CategoryController::class,'update'])->name('category.update');
+    Route::get('category/delete/{category}',[App\Http\Controllers\CategoryController::class,'delete'])->name('category.delete');
+
 });
 
 require __DIR__.'/auth.php';

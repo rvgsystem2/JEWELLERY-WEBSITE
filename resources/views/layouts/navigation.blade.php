@@ -71,6 +71,9 @@
                         <i class="fas fa-star mr-1"></i> Collections
                     </x-nav-link>
 
+                    <x-nav-link :href="route('category.index')" :active="request()->routeIs('category*')">
+                        <i class="fas fa-tags mr-1"></i> Categories
+                    </x-nav-link>
                 </div>
             </div>
 
