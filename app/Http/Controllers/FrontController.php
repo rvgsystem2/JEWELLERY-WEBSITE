@@ -19,4 +19,11 @@ class FrontController extends Controller
     {
         return view('front.about');
     }
+    public function detail(){
+        return view('front.detail');
+    }
+    public function product(){
+        return view('front.product');
+    }
+
 }

@@ -18,8 +18,8 @@ use App\Http\Controllers\FrontController;
 Route::get('/', [FrontController::class, 'index'])->name('home');
 Route::get('/about', [FrontController::class, 'about'])->name('about');
 Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
-
-
+Route::get('/detail', [FrontController::class, 'detail'])->name('detail');
+Route::get('/product', [FrontController::class, 'product'])->name('product');
 
 
 

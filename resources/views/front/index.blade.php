@@ -263,11 +263,11 @@
                             <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-xl font-bold text-gray-900">$299.99</span>
-                                <button
+                                <a href="{{route('detail')}}"> <button
                                     class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                    aria-label="Add Premium Gold Necklace to cart">
+                                    aria-label="Add Silver Charm Bracelet to cart">
                                     View Details
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>
@@ -312,12 +312,13 @@
                                 <div>
                                     <span class="text-xl font-bold text-gray-900">$149.99</span>
                                     <span class="text-sm text-gray-500 line-through ml-2">$199.99</span>
+                                    <a href="{{route('detail')}}"> <button
+                                        class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
+                                        aria-label="Add Silver Charm Bracelet to cart">
+                                        View Details
+                                    </button></a>
                                 </div>
-                                <button
-                                    class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                    aria-label="Add Silver Charm Bracelet to cart">
-                                    View Details
-                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -357,11 +358,11 @@
                             <p class="text-gray-600 text-sm mb-4 flex-grow">Classic diamond stud earrings with premium quality stones.</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-xl font-bold text-gray-900">$89.99</span>
-                                <button
+                                <a href="{{route('detail')}}">  <button
                                     class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
                                     aria-label="Add Diamond Stud Earrings to cart">
                                     View Details
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>
@@ -404,11 +405,11 @@
                             <p class="text-gray-600 text-sm mb-4 flex-grow">Exquisite platinum engagement ring with brilliant-cut diamond.</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-xl font-bold text-gray-900">$1,299.99</span>
-                                <button
+                                <a href="{{route('detail')}}"> <button
                                     class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
                                     aria-label="Add Platinum Engagement Ring to cart">
                                     View Details
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>
@@ -448,11 +449,11 @@
                             <p class="text-gray-600 text-sm mb-4 flex-grow">Set of three intricately designed 14k gold bangles.</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-xl font-bold text-gray-900">$179.99</span>
-                                <button
+                                <a href="{{route('detail')}}"> <button
                                     class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
                                     aria-label="Add Gold Bangles Set to cart">
                                     View Details
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>
@@ -498,11 +499,11 @@
                                     <span class="text-xl font-bold text-gray-900">$79.99</span>
                                     <span class="text-sm text-gray-500 line-through ml-2">$99.99</span>
                                 </div>
-                                <button
+                                <a href="{{route('detail')}}"> <button
                                     class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
-                                    aria-label="Add Diamond Nose Ring to cart">
+                                    aria-label="Add Gold Bangles Set to cart">
                                     View Details
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>
