@@ -67,6 +67,10 @@
                     <x-nav-link :href="route('about.features.index')" :active="request()->routeIs('about.features*')">
                         <i class="fas fa-star mr-1"></i> Features
                     </x-nav-link>
+                    <x-nav-link :href="route('collection.index')" :active="request()->routeIs('collection*')">
+                        <i class="fas fa-star mr-1"></i> Collections
+                    </x-nav-link>
+
                 </div>
             </div>
 

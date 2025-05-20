@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\AboutFeature;
 use App\Models\Banner;
+use App\Models\collection;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -15,7 +16,8 @@ class FrontController extends Controller
         $banners = Banner::all();
         $abouts = About::latest()->get();
         $aboutfeatures = AboutFeature::latest()->get();
-        return view('front.index', compact('banners', 'abouts', 'aboutfeatures'));
+        $collections = collection::latest()->get();
+        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections'));
     }
 
     public function contact()
