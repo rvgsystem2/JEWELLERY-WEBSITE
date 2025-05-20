@@ -22,6 +22,7 @@ Route::get('/about', [FrontController::class, 'about'])->name('about');
 Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 Route::get('/detail', [FrontController::class, 'detail'])->name('detail');
 Route::get('/product', [FrontController::class, 'product'])->name('product');
+Route::get('/gallery', [FrontController::class, 'gallery'])->name('gallery');
 
 
 
@@ -73,7 +74,7 @@ Route::middleware('auth')->group(function () {
     Route::get('banner/delete/{banner}',[BannerController::class,'delete'])->name('banner.delete');
 
 
-    // About Routes 
+    // About Routes
     Route::get('about/index',[AboutController::class,'index'])->name('about.index');
     Route::get('about/create',[AboutController::class,'create'])->name('about.create');
     Route::post('about/store',[AboutController::class,'store'])->name('about.store');
@@ -82,7 +83,7 @@ Route::middleware('auth')->group(function () {
     Route::get('about/delete/{about}',[AboutController::class,'delete'])->name('about.delete');
 
 
-    // About Features Routes    
+    // About Features Routes
     Route::get('about/features/index',[AboutFeatureController::class,'index'])->name('about.features.index');
     Route::get('about/features/create',[AboutFeatureController::class,'create'])->name('about.features.create');
     Route::post('about/features/store',[AboutFeatureController::class,'store'])->name('about.features.store');

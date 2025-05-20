@@ -32,7 +32,7 @@
       <!-- Navigation -->
       <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
         <a href="/" class="hover:text-yellow-600 transition">Home</a>
-        <a href="{{route('product')}}" class="hover:text-yellow-600 transition">Collections</a>
+        <a href="{{route('product')}}" class="hover:text-yellow-600 transition">Gallery</a>
         <a href="{{route('product')}}" class="hover:text-yellow-600 transition">Products</a>
         <a href="{{route('about')}}" class="hover:text-yellow-600 transition">About Us</a>
         <a href="{{route('contact')}}" class="hover:text-yellow-600 transition">Contact</a>
@@ -61,7 +61,7 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-white shadow-md">
       <a href="/" class="block py-2 text-gray-700 hover:text-yellow-600">Home</a>
-      <a href="{{route('product')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Collections</a>
+      <a href="{{route('product')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Gallery</a>
       <a href="{{route('product')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Products</a>
       <a href="{{route('about')}}" class="block py-2 text-gray-700 hover:text-yellow-600">About Us</a>
       <a href="{{route('contact')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Contact</a>

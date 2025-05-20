@@ -21,7 +21,7 @@ class FrontController extends Controller
         $categories = Category::latest()->get();
         return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories'));
     }
-    
+
 
     public function contact()
     {
@@ -36,6 +36,9 @@ class FrontController extends Controller
     }
     public function product(){
         return view('front.product');
+    }
+    public function gallery(){
+        return view('front.gallery');
     }
 
 }
