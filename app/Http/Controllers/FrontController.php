@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\AboutFeature;
 use App\Models\Banner;
+use App\Models\Category;
 use App\Models\collection;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,10 @@ class FrontController extends Controller
         $abouts = About::latest()->get();
         $aboutfeatures = AboutFeature::latest()->get();
         $collections = collection::latest()->get();
-        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections'));
+        $categories = Category::latest()->get();
+        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories'));
     }
+    
 
     public function contact()
     {

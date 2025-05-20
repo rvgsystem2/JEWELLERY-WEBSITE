@@ -66,76 +66,29 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
                 <!-- Category 1 -->
-                <div
+                @forelse ($categories as $category)
+                    <div
+                        class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
+                        <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}"
+                            class="mx-auto mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800">{{ $category->name }}</h3>
+                        <p class="text-sm text-gray-500 mt-1">{{ $category->title }}</p>
+                    </div>
+                    
+                @empty
+                    <div class="col-span-1">
+                        <p class="text-gray-500">No categories found.</p>
+                    </div>
+                @endforelse
+                {{-- <div
                     class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
                     <img src="https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_1280.jpg" alt="Necklaces"
                         class="mx-auto mb-4">
                     <h3 class="text-lg font-semibold text-gray-800">Necklaces</h3>
                     <p class="text-sm text-gray-500 mt-1">Elegant designs to shine</p>
-                </div>
+                </div> --}}
 
-                <!-- Category 2 -->
-                <div
-                    class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_1280.jpg" alt="Earrings"
-                        class="mx-auto mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800">Earrings</h3>
-                    <p class="text-sm text-gray-500 mt-1">Sparkle with every step</p>
-                </div>
-
-                <!-- Category 3 -->
-                <div
-                    class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_1280.jpg" alt="Bracelets"
-                        class="mx-auto mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800">Bracelets</h3>
-                    <p class="text-sm text-gray-500 mt-1">Graceful wrist adornments</p>
-                </div>
-
-                <!-- Category 4 -->
-                <div
-                    class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_1280.jpg" alt="Rings"
-                        class="mx-auto mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800">Rings</h3>
-                    <p class="text-sm text-gray-500 mt-1">Symbol of elegance</p>
-                </div>
-
-                <!-- Category 5 -->
-                <div
-                    class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_1280.jpg" alt="Anklets"
-                        class="mx-auto mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800">Anklets</h3>
-                    <p class="text-sm text-gray-500 mt-1">Delicate steps of beauty</p>
-                </div>
-
-                <!-- Category 6 -->
-                <div
-                    class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_1280.jpg" alt="Maang Tikka"
-                        class="mx-auto mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800">Maang Tikka</h3>
-                    <p class="text-sm text-gray-500 mt-1">Traditional charm</p>
-                </div>
-
-                <!-- Category 7 -->
-                <div
-                    class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_1280.jpg" alt="Bangles"
-                        class="mx-auto mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800">Bangles</h3>
-                    <p class="text-sm text-gray-500 mt-1">Celebrate tradition</p>
-                </div>
-
-                <!-- Category 8 -->
-                <div
-                    class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/01/15/14/beads-967179_1280.jpg" alt="Brooches"
-                        class="mx-auto mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800">Brooches</h3>
-                    <p class="text-sm text-gray-500 mt-1">Add a touch of grace</p>
-                </div>
+              
 
             </div>
         </div>
