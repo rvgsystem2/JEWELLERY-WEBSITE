@@ -30,7 +30,8 @@
 
         <div>
           <h3 class="font-semibold text-lg">Address</h3>
-          <p class="text-gray-600">123 Gold Street, Zaveri Bazaar, Mumbai, India</p>
+          <p class="text-gray-600">Vijay Cinema Rd, Japlin Ganj, Bahadurpur, Ballia, Uttar Pradesh 277001
+        </p>
         </div>
       </div>
     </div>
