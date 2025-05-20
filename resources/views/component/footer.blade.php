@@ -37,7 +37,7 @@
             <li><a href="#" class="hover:text-white transition">Home</a></li>
             <li><a href="#" class="hover:text-white transition">About Us</a></li>
             <li><a href="#" class="hover:text-white transition">Services</a></li>
-            <li><a href="#" class="hover:text-white transition">Portfolio</a></li>
+            <li><a href="#" class="hover:text-white transition">Products</a></li>
             <li><a href="#" class="hover:text-white transition">Contact</a></li>
           </ul>
         </div>
