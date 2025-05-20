@@ -90,6 +90,15 @@ Route::middleware('auth')->group(function () {
     Route::post('about/features/update/{aboutFeature}',[AboutFeatureController::class,'update'])->name('about.features.update');
     Route::get('about/features/delete/{aboutFeature}',[AboutFeatureController::class,'delete'])->name('about.features.delete');
     // About Features Routes
+
+
+    // collection Routes
+    Route::get('collection/index',[App\Http\Controllers\collectionController::class,'index'])->name('collection.index');
+    Route::get('collection/create',[App\Http\Controllers\collectionController::class,'create'])->name('collection.create');
+    Route::post('collection/store',[App\Http\Controllers\collectionController::class,'store'])->name('collection.store');
+    Route::get('collection/edit/{collection}',[App\Http\Controllers\collectionController::class,'edit'])->name('collection.edit');
+    Route::post('collection/update/{collection}',[App\Http\Controllers\collectionController::class,'update'])->name('collection.update');
+    Route::get('collection/delete/{collection}',[App\Http\Controllers\collectionController::class,'delete'])->name('collection.delete');
 });
 
 require __DIR__.'/auth.php';

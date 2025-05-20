@@ -781,111 +781,51 @@
 
 <!-- Tabs Filter Section -->
 <section class="py-12 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Jewellery Collection</h2>
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Jewellery Collection</h2>
 
-      <!-- Tabs -->
-      <div class="flex flex-wrap justify-center gap-4 mb-10">
-        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 active-tab" data-category="all">All</button>
-        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" data-category="rings">Rings</button>
-        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" data-category="necklaces">Necklaces</button>
-        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" data-category="earrings">Earrings</button>
-        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" data-category="bracelets">Bracelets</button>
-      </div>
-
-      <!-- Product Grid -->
-      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="productGrid">
-        <!-- Ring -->
-        <div class="product-card" data-category="rings">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Ring" class="w-full">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-gray-800">Diamond Ring</h3>
-              <p class="text-gray-500 mt-1">₹ 25,000</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Necklace -->
-        <div class="product-card" data-category="necklaces">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Necklace" class="w-full">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-gray-800">Gold Necklace</h3>
-              <p class="text-gray-500 mt-1">₹ 48,000</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Earring -->
-        <div class="product-card" data-category="earrings">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Earring" class="w-full">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-gray-800">Pearl Earrings</h3>
-              <p class="text-gray-500 mt-1">₹ 15,000</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bracelet -->
-        <div class="product-card" data-category="bracelets">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Bracelet" class="w-full">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-gray-800">Charm Bracelet</h3>
-              <p class="text-gray-500 mt-1">₹ 12,500</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="rings">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Ring" class="w-full">
-              <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-800">Diamond Ring</h3>
-                <p class="text-gray-500 mt-1">₹ 25,000</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Necklace -->
-          <div class="product-card" data-category="necklaces">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Necklace" class="w-full">
-              <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-800">Gold Necklace</h3>
-                <p class="text-gray-500 mt-1">₹ 48,000</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Earring -->
-          <div class="product-card" data-category="earrings">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Earring" class="w-full">
-              <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-800">Pearl Earrings</h3>
-                <p class="text-gray-500 mt-1">₹ 15,000</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bracelet -->
-          <div class="product-card" data-category="bracelets">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="https://cdn.pixabay.com/photo/2023/05/23/09/23/pearl-8012322_1280.jpg" alt="Bracelet" class="w-full">
-              <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-800">Charm Bracelet</h3>
-                <p class="text-gray-500 mt-1">₹ 12,500</p>
-              </div>
-            </div>
-          </div>
-
-        <!-- Duplicate a few more items as needed -->
-      </div>
+    <!-- Tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <button class="tab-btn px-4 py-2 bg-amber-500 text-white rounded-full active-tab" data-category="all">All</button>
+      @foreach ($collections->unique('category') as $tab)
+        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300"
+                data-category="{{ strtolower($tab->category) }}">
+          {{ ucfirst($tab->category) }}
+        </button>
+      @endforeach
     </div>
-  </section>
+
+  <!-- Grid of all images from collections -->
+<div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="productGrid">
+  @foreach ($collections as $collection)
+    @php
+        $images = array_values(array_filter(explode(',', $collection->image ?? '')));
+    @endphp
+
+    @foreach (array_slice($images, 1) as $img)
+      @if (!empty($img))
+        <div class="product-card" data-category="{{ strtolower($collection->category) }}">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg overflow-hidden transition-all duration-300">
+            <img src="{{ asset('storage/' . $img) }}" alt="{{ $collection->title }}"
+                 class="w-full h-56 object-cover">
+
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 truncate">{{ $collection->title }}</h3>
+              <p class="text-sm text-gray-500">₹ {{ $collection->price }}</p>
+            </div>
+          </div>
+        </div>
+      @endif
+    @endforeach
+  @endforeach
+</div>
+
+
+  </div>
+</section>
+
+
+
 
 
   <section class="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
