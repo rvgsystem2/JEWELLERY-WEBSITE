@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AboutFeatureController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\PermissionController;
@@ -71,6 +73,23 @@ Route::middleware('auth')->group(function () {
     Route::get('banner/delete/{banner}',[BannerController::class,'delete'])->name('banner.delete');
 
 
+    // About Routes 
+    Route::get('about/index',[AboutController::class,'index'])->name('about.index');
+    Route::get('about/create',[AboutController::class,'create'])->name('about.create');
+    Route::post('about/store',[AboutController::class,'store'])->name('about.store');
+    Route::get('about/edit/{about}',[AboutController::class,'edit'])->name('about.edit');
+    Route::post('about/update/{about}',[AboutController::class,'update'])->name('about.update');
+    Route::get('about/delete/{about}',[AboutController::class,'delete'])->name('about.delete');
+
+
+    // About Features Routes    
+    Route::get('about/features/index',[AboutFeatureController::class,'index'])->name('about.features.index');
+    Route::get('about/features/create',[AboutFeatureController::class,'create'])->name('about.features.create');
+    Route::post('about/features/store',[AboutFeatureController::class,'store'])->name('about.features.store');
+    Route::get('about/features/edit/{aboutFeature}',[AboutFeatureController::class,'edit'])->name('about.features.edit');
+    Route::post('about/features/update/{aboutFeature}',[AboutFeatureController::class,'update'])->name('about.features.update');
+    Route::get('about/features/delete/{aboutFeature}',[AboutFeatureController::class,'delete'])->name('about.features.delete');
+    // About Features Routes
 });
 
 require __DIR__.'/auth.php';

@@ -57,6 +57,16 @@
                     <x-nav-link :href="route('banner.index')" :active="request()->routeIs('banner*')">
                         <i class="fas fa-image mr-1"></i> Banners
                     </x-nav-link>
+
+                     
+                    <x-nav-link :href="route('about.index')" :active="request()->routeIs('about*')">
+                        <i class="fas fa-info-circle mr-1"></i> About
+                    </x-nav-link>
+
+                 
+                    <x-nav-link :href="route('about.features.index')" :active="request()->routeIs('about.features*')">
+                        <i class="fas fa-star mr-1"></i> Features
+                    </x-nav-link>
                 </div>
             </div>
 
