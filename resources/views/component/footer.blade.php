@@ -11,13 +11,15 @@
             <svg class="h-5 w-5 mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
             </svg>
-            <span>123 Business Ave, Suite 100<br>New York, NY 10001</span>
+            <span>Vijay Cinema Rd, Japlin Ganj, Bahadurpur, Ballia, Uttar Pradesh 277001
+            </span>
           </div>
           <div class="flex items-center mb-3">
             <svg class="h-5 w-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
-            <span>+1 (555) 123-4567</span>
+            <span>8707656944</span>
+            <span>9389859821</span>
           </div>
           <div class="flex items-center">
             <svg class="h-5 w-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -72,7 +74,7 @@
       <p class="text-sm">&copy; 2025 R V jewelers. All rights reserved.</p>
       <div class="flex space-x-5">
         <!-- Facebook -->
-        <a href="#" class="hover:text-white transition" aria-label="Facebook">
+        <a href="https://www.facebook.com/people/Rvjewellers/100065329246578/" class="hover:text-white transition" aria-label="Facebook">
           <i class="fab fa-facebook-f text-xl"></i>
         </a>
         <!-- Twitter -->
@@ -80,7 +82,7 @@
           <i class="fab fa-twitter text-xl"></i>
         </a>
         <!-- Instagram -->
-        <a href="#" class="hover:text-white transition" aria-label="Instagram">
+        <a href="https://www.instagram.com/aajayballia90/?g=5" class="hover:text-white transition" aria-label="Instagram">
           <i class="fab fa-instagram text-xl"></i>
         </a>
         <!-- LinkedIn -->

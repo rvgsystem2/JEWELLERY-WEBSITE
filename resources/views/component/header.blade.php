@@ -26,16 +26,16 @@
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <!-- Logo -->
       <a href="#" class="text-2xl font-bold text-yellow-600 tracking-wide">
-        RV<span class="text-gray-800">Jewels</span>
+        RV<span class="text-gray-800">Jewellers</span>
       </a>
 
       <!-- Navigation -->
       <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
-        <a href="#" class="hover:text-yellow-600 transition">Home</a>
-        <a href="#" class="hover:text-yellow-600 transition">Collections</a>
-        <a href="#" class="hover:text-yellow-600 transition">Products</a>
-        <a href="#" class="hover:text-yellow-600 transition">About Us</a>
-        <a href="#" class="hover:text-yellow-600 transition">Contact</a>
+        <a href="/" class="hover:text-yellow-600 transition">Home</a>
+        <a href="{{route('product')}}" class="hover:text-yellow-600 transition">Collections</a>
+        <a href="{{route('product')}}" class="hover:text-yellow-600 transition">Products</a>
+        <a href="{{route('about')}}" class="hover:text-yellow-600 transition">About Us</a>
+        <a href="{{route('contact')}}" class="hover:text-yellow-600 transition">Contact</a>
       </nav>
 
       <!-- Icons -->
@@ -43,10 +43,10 @@
         <button class="hidden md:block text-gray-600 hover:text-yellow-600">
           <i class="fas fa-search text-lg"></i>
         </button>
-        <a href="#" class="relative text-gray-600 hover:text-yellow-600">
+        {{-- <a href="#" class="relative text-gray-600 hover:text-yellow-600">
           <i class="fas fa-shopping-cart text-lg"></i>
           <span class="absolute -top-1 -right-2 bg-yellow-500 text-white text-xs px-1 rounded-full">2</span>
-        </a>
+        </a> --}}
         <a href="#" class="text-gray-600 hover:text-yellow-600">
           <i class="fas fa-user text-lg"></i>
         </a>
@@ -60,11 +60,11 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-white shadow-md">
-      <a href="#" class="block py-2 text-gray-700 hover:text-yellow-600">Home</a>
-      <a href="#" class="block py-2 text-gray-700 hover:text-yellow-600">Collections</a>
-      <a href="#" class="block py-2 text-gray-700 hover:text-yellow-600">Products</a>
-      <a href="#" class="block py-2 text-gray-700 hover:text-yellow-600">About Us</a>
-      <a href="#" class="block py-2 text-gray-700 hover:text-yellow-600">Contact</a>
+      <a href="/" class="block py-2 text-gray-700 hover:text-yellow-600">Home</a>
+      <a href="{{route('product')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Collections</a>
+      <a href="{{route('product')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Products</a>
+      <a href="{{route('about')}}" class="block py-2 text-gray-700 hover:text-yellow-600">About Us</a>
+      <a href="{{route('contact')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Contact</a>
     </div>
   </header>
 
