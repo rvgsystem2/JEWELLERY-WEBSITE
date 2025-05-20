@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
-
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProfileController;
 
@@ -12,15 +12,15 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\FrontController;
+
+
+Route::get('/', [FrontController::class, 'index'])->name('home');
+Route::get('/about', [FrontController::class, 'about'])->name('about');
+Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 
 
 
-Route::get('/', function () {
-    return view('front.index');
-});
-Route::get('/contact', function () {
-    return view('front.contact');
-});
 
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth','verified'])->name('dashboard');
@@ -62,7 +62,13 @@ Route::middleware('auth')->group(function () {
 
 
 
-
+    // Banner Routes
+    Route::get('banner/index',[BannerController::class,'index'])->name('banner.index');
+    Route::get('banner/create',[BannerController::class,'create'])->name('banner.create');
+    Route::post('banner/store',[BannerController::class,'store'])->name('banner.store');
+    Route::get('banner/edit/{banner}',[BannerController::class,'edit'])->name('banner.edit');
+    Route::post('banner/update/{banner}',[BannerController::class,'update'])->name('banner.update');
+    Route::get('banner/delete/{banner}',[BannerController::class,'delete'])->name('banner.delete');
 
 
 });

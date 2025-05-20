@@ -53,6 +53,10 @@
 
                         </div>
                     </div>
+
+                    <x-nav-link :href="route('banner.index')" :active="request()->routeIs('banner*')">
+                        <i class="fas fa-image mr-1"></i> Banners
+                    </x-nav-link>
                 </div>
             </div>
 
