@@ -9,12 +9,12 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         @forelse ($products as $product)
             <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden border border-gray-100">
-                
+
                 <!-- Product Image -->
                 <div class="relative group h-56 overflow-hidden bg-gray-50">
                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
                          class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
-                    
+
                     <!-- Tag Badge -->
                     @if($product->tag)
                         <span class="absolute top-3 right-3 bg-amber-600 text-white text-xs px-3 py-1 rounded-full shadow">
@@ -24,7 +24,7 @@
                 </div>
 
                 <!-- Product Info -->
-                <div class="p-5 flex flex-col flex-grow">
+     `           <div class="p-5 flex flex-col flex-grow">
                     <h3 class="text-lg font-semibold text-gray-800 mb-1 line-clamp-1">{{ $product->name }}</h3>
                     <p class="text-sm text-gray-500 mb-3 line-clamp-2">{{ $product->sort_description }}</p>
 
