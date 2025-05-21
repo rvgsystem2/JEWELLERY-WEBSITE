@@ -11,7 +11,7 @@
                 <!-- Slide 1 -->
                 @forelse ($banners as $banner)
                     <div class="swiper-slide">
-                        <div class="h-64 md:h-96">
+                        <div class="h-full md:h-full">
                             <img src="{{ asset('storage/' . $banner->image) }}" alt="{{ $banner->title }}"
                                 class="w-full h-full object-cover ">
                         </div>
@@ -19,7 +19,7 @@
 
                 @empty
                     <div class="swiper-slide">
-                        <div class="h-64 md:h-96 flex items-center justify-center text-center text-gray-500">
+                        <div class="h-full md:h-full flex items-center justify-center text-center text-gray-500">
                             No banners found.
                         </div>
                     </div>
