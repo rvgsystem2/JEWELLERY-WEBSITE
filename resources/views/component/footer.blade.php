@@ -79,17 +79,17 @@
           <i class="fab fa-facebook-f text-xl"></i>
         </a>
         <!-- Twitter -->
-        <a href="#" class="hover:text-white transition" aria-label="Twitter">
+        {{-- <a href="#" class="hover:text-white transition" aria-label="Twitter">
           <i class="fab fa-twitter text-xl"></i>
-        </a>
+        </a> --}}
         <!-- Instagram -->
         <a href="https://www.instagram.com/aajayballia90/?g=5" class="hover:text-white transition" aria-label="Instagram">
           <i class="fab fa-instagram text-xl"></i>
         </a>
         <!-- LinkedIn -->
-        <a href="#" class="hover:text-white transition" aria-label="LinkedIn">
+        {{-- <a href="#" class="hover:text-white transition" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in text-xl"></i>
-        </a>
+        </a> --}}
       </div>
     </div>
   </footer>
