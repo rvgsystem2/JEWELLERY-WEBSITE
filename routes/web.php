@@ -23,6 +23,7 @@ Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 Route::get('/detail', [FrontController::class, 'detail'])->name('detail');
 Route::get('/product', [FrontController::class, 'product'])->name('product');
 Route::get('/gallery', [FrontController::class, 'gallery'])->name('gallery');
+    Route::get('product/details/{product}',[FrontController::class,'detail'])->name('product.details');
 
 
 
@@ -108,6 +109,24 @@ Route::middleware('auth')->group(function () {
     Route::get('category/edit/{category}',[App\Http\Controllers\CategoryController::class,'edit'])->name('category.edit');
     Route::post('category/update/{category}',[App\Http\Controllers\CategoryController::class,'update'])->name('category.update');
     Route::get('category/delete/{category}',[App\Http\Controllers\CategoryController::class,'delete'])->name('category.delete');
+
+    //product Routes    
+
+    Route::get('product/index',[App\Http\Controllers\ProductController::class,'index'])->name('product.index');
+    Route::get('product/create',[App\Http\Controllers\ProductController::class,'create'])->name('product.create');          
+    Route::post('product/store',[App\Http\Controllers\ProductController::class,'store'])->name('product.store');
+    Route::get('product/edit/{product}',[App\Http\Controllers\ProductController::class,'edit'])->name('product.edit');
+    Route::post('product/update/{product}',[App\Http\Controllers\ProductController::class,'update'])->name('product.update');
+    Route::get('product/delete/{product}',[App\Http\Controllers\ProductController::class,'delete'])->name('product.delete');
+
+    //product details Routes
+    Route::get('product/details/index',[App\Http\Controllers\ProductDetailsController::class,'index'])->name('product.details.index');
+    Route::get('product/details/create',[App\Http\Controllers\ProductDetailsController::class,'create'])->name('product.details.create');
+    Route::post('product/details/store',[App\Http\Controllers\ProductDetailsController::class,'store'])->name('product.details.store');
+    Route::get('product/details/edit/{productDetails}',[App\Http\Controllers\ProductDetailsController::class,'edit'])->name('product.details.edit');
+    Route::post('product/details/update/{productDetails}',[App\Http\Controllers\ProductDetailsController::class,'update'])->name('product.details.update');
+    Route::get('product/details/delete/{productDetails}',[App\Http\Controllers\ProductDetailsController::class,'delete'])->name('product.details.delete');
+    //product details Routes
 
 });
 

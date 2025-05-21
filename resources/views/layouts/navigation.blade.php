@@ -74,6 +74,12 @@
                     <x-nav-link :href="route('category.index')" :active="request()->routeIs('category*')">
                         <i class="fas fa-tags mr-1"></i> Categories
                     </x-nav-link>
+                    <x-nav-link :href="route('product.index')" :active="request()->routeIs('product*')">
+                        <i class="fas fa-box-open mr-1"></i> Products
+                    </x-nav-link>
+                    <x-nav-link :href="route('product.details.index')" :active="request()->routeIs('product.details*')">
+                        <i class="fas fa-shopping-cart mr-1"></i> productDetail
+                    </x-nav-link>
                 </div>
             </div>
 

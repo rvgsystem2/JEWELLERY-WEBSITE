@@ -7,6 +7,7 @@ use App\Models\AboutFeature;
 use App\Models\Banner;
 use App\Models\Category;
 use App\Models\collection;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -19,7 +20,8 @@ class FrontController extends Controller
         $aboutfeatures = AboutFeature::latest()->get();
         $collections = collection::latest()->get();
         $categories = Category::latest()->get();
-        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories'));
+        $products = Product::latest()->get()->take(8);
+        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories', 'products'));
     }
 
 
@@ -32,11 +34,18 @@ class FrontController extends Controller
         $abouts = About::latest()->get();
         return view('front.about', compact('abouts'));
     }
-    public function detail(){
-        return view('front.detail');
+    public function detail(Product $product){
+
+      $relatedProducts = Product::where('id', '!=', $product)
+                              ->inRandomOrder()
+                              ->take(4)
+                              ->get();
+        return view('front.detail', compact('product', 'relatedProducts'));
     }
     public function product(){
-        return view('front.product');
+        $products = Product::latest()->paginate(8);
+
+        return view('front.product', compact('products'));
     }
     public function gallery(){
         $collections = collection::latest()->get();
