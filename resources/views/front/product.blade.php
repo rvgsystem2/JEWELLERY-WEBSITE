@@ -49,10 +49,10 @@
                                 <i class="far fa-heart text-xl"></i>
                             </button>
                         </div>
-                        <button
+                        <a href="{{route('product')}}"> <button
                             class="mt-4 w-full bg-amber-500 hover:bg-amber-600 hover:text-white text-gray-800 font-medium py-2 px-4 rounded-full transition duration-300">
                             View Details
-                        </button>
+                        </button></a>
                     </div>
                 </div>
 
@@ -83,10 +83,10 @@
                                 <i class="far fa-heart text-xl"></i>
                             </button>
                         </div>
-                        <button
+                        <a href="{{route('product')}}"><button
                             class="mt-4 w-full bg-amber-500 hover:bg-amber-600 hover:text-white text-gray-800 font-medium py-2 px-4 rounded-full transition duration-300">
                             View Details
-                        </button>
+                        </button></a>
                     </div>
                 </div>
 
@@ -123,10 +123,10 @@
                                 <i class="far fa-heart text-xl"></i>
                             </button>
                         </div>
-                        <button
+                        <a href="{{route('product')}}"><button
                             class="mt-4 w-full bg-amber-500 hover:bg-amber-600 hover:text-white text-gray-800 font-medium py-2 px-4 rounded-full transition duration-300">
                             View Details
-                        </button>
+                        </button></a>
                     </div>
                 </div>
 
@@ -157,10 +157,10 @@
                                 <i class="far fa-heart text-xl"></i>
                             </button>
                         </div>
-                        <button
+                        <a href="{{route('product')}}"><button
                             class="mt-4 w-full bg-amber-500 hover:bg-amber-600 hover:text-white text-gray-800 font-medium py-2 px-4 rounded-full transition duration-300">
                             View Details
-                        </button>
+                        </button></a>
                     </div>
                 </div>
 
@@ -191,10 +191,10 @@
                                 <i class="far fa-heart text-xl"></i>
                             </button>
                         </div>
-                        <button
+                        <a href="{{route('product')}}"><button
                             class="mt-4 w-full bg-amber-500 hover:bg-amber-600 hover:text-white text-gray-800 font-medium py-2 px-4 rounded-full transition duration-300">
                             View Details
-                        </button>
+                        </button></a>
                     </div>
                 </div>
 
@@ -228,10 +228,10 @@
                                 <i class="far fa-heart text-xl"></i>
                             </button>
                         </div>
-                        <button
+                        <a href="{{route('product')}}"><button
                             class="mt-4 w-full bg-amber-500 hover:bg-amber-600 hover:text-white text-gray-800 font-medium py-2 px-4 rounded-full transition duration-300">
                             View Details
-                        </button>
+                        </button></a>
                     </div>
                 </div>
 
@@ -262,10 +262,10 @@
                                 <i class="far fa-heart text-xl"></i>
                             </button>
                         </div>
-                        <button
+                        <a href="{{route('product')}}"><button
                             class="mt-4 w-full bg-amber-500 hover:bg-amber-600 hover:text-white text-gray-800 font-medium py-2 px-4 rounded-full transition duration-300">
                             View Details
-                        </button>
+                        </button></a>
                     </div>
                 </div>
 
@@ -299,10 +299,10 @@
                                 <i class="far fa-heart text-xl"></i>
                             </button>
                         </div>
-                        <button
+                        <a href="{{route('product')}}"><button
                             class="mt-4 w-full bg-amber-500 hover:bg-amber-600 hover:text-white text-gray-800 font-medium py-2 px-4 rounded-full transition duration-300">
                             View Details
-                        </button>
+                        </button></a>
                     </div>
                 </div>
             </div>

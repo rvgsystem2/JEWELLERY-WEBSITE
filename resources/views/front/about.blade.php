@@ -65,7 +65,7 @@
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-yellow-800 mb-4">Join Our Journey</h2>
       <p class="text-gray-700 mb-6">Whether you're looking for a perfect gift or something for yourself, Royal Jewels has something truly special for everyone. Explore our collections today.</p>
-      <a href="/products.html" class="inline-block bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-700 transition">Explore Collections</a>
+      <a href="{{route('product')}}" class="inline-block bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-700 transition">Explore Collections</a>
     </div>
   </section>
 @endsection
