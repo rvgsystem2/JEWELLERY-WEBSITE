@@ -6,7 +6,7 @@
 
         <!-- Company Info -->
         <div>
-          <h3 class="text-white text-lg font-semibold mb-4">R V jewellers</h3>
+          <a href="/"><h3 class="text-white text-lg font-semibold mb-4">R V jewellers</h3></a>
           <div class="flex items-start mb-3">
             <svg class="h-5 w-5 mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
@@ -35,11 +35,11 @@
         <div>
           <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white transition">Home</a></li>
-            <li><a href="#" class="hover:text-white transition">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition">Services</a></li>
-            <li><a href="#" class="hover:text-white transition">Products</a></li>
-            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+            <li><a href="/" class="hover:text-white transition">Home</a></li>
+            <li><a href="{{route('about')}}" class="hover:text-white transition">About Us</a></li>
+            <li><a href="{{route('gallery')}}" class="hover:text-white transition">Gallery</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Products</a></li>
+            <li><a href="{{route('contact')}}" class="hover:text-white transition">Contact</a></li>
           </ul>
         </div>
 
@@ -47,11 +47,11 @@
         <div>
           <h3 class="text-white text-lg font-semibold mb-4">Products</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white transition">Necklaces</a></li>
-            <li><a href="#" class="hover:text-white transition">Rings</a></li>
-            <li><a href="#" class="hover:text-white transition">EarRings</a></li>
-            <li><a href="#" class="hover:text-white transition">Bracelets</a></li>
-            <li><a href="#" class="hover:text-white transition">Bangles</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Necklaces</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Rings</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">EarRings</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Bracelets</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Bangles</a></li>
           </ul>
         </div>
 
