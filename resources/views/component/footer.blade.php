@@ -45,13 +45,13 @@
 
         <!-- Services -->
         <div>
-          <h3 class="text-white text-lg font-semibold mb-4">Our Services</h3>
+          <h3 class="text-white text-lg font-semibold mb-4">Products</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white transition">Web Development</a></li>
-            <li><a href="#" class="hover:text-white transition">Mobile Apps</a></li>
-            <li><a href="#" class="hover:text-white transition">UI/UX Design</a></li>
-            <li><a href="#" class="hover:text-white transition">Digital Marketing</a></li>
-            <li><a href="#" class="hover:text-white transition">Consulting</a></li>
+            <li><a href="#" class="hover:text-white transition">Necklaces</a></li>
+            <li><a href="#" class="hover:text-white transition">Rings</a></li>
+            <li><a href="#" class="hover:text-white transition">EarRings</a></li>
+            <li><a href="#" class="hover:text-white transition">Bracelets</a></li>
+            <li><a href="#" class="hover:text-white transition">Bangles</a></li>
           </ul>
         </div>
 
@@ -72,7 +72,7 @@
 
     <!-- Bottom Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-      <p class="text-sm">&copy; 2025 R V jewelers. All rights reserved.</p>
+      <p class="text-sm">&copy; 2025 R V jewellers. All rights reserved.</p>
       <div class="flex space-x-5">
         <!-- Facebook -->
         <a href="https://www.facebook.com/people/Rvjewellers/100065329246578/" class="hover:text-white transition" aria-label="Facebook">
