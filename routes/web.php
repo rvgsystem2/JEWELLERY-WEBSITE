@@ -30,6 +30,7 @@ Route::get('/gallery', [FrontController::class, 'gallery'])->name('gallery');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/contact/delete/{id}', [ContactController::class, 'delete'])->name('contact.delete');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth','verified'])->name('dashboard');
 

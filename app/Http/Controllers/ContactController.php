@@ -13,26 +13,11 @@ class ContactController extends Controller
     {
         // You can fetch any necessary data here if needed  
         // For example, you might want to fetch existing contacts or other related data
-        $contacts = Contact::all();
-        return view('contact.index', compact('contacts'));
+        $contactData = Contact::all();
+        return view('contact.index', compact('contactData'));
     }
 
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'name' => 'required',
-    //         'subject' => 'required',
-    //         'message' => 'required',
-    //         'phone' => 'required',
-    //     ]);
-
-    //     $contact = Contact::create($request->all());
-    //     // Optionally, you can send an email or perform other actions here
-    //     // For example, you can use Laravel's Mail facade to send an email
-    //     // Mail::to('admin@example.com')->send(new ContactFormSubmitted($contact));
-
-    //     return redirect()->back()->with('success', 'Message sent successfully!');
-    // }
+   
 
 
     public function store(Request $request)
@@ -54,5 +39,13 @@ class ContactController extends Controller
         'message' => 'Thank you! We will get back to you soon.'
     ]);
 }
+
+    public function delete($id)
+    {
+        $contact = Contact::findOrFail($id);
+        $contact->delete();
+
+        return redirect()->back()->with('success', 'Contact deleted successfully!');
+    }
 
 }
