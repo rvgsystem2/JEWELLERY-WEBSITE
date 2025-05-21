@@ -14,7 +14,7 @@
       <div class="flex justify-center md:justify-end items-center gap-3 text-gray-600">
         <a href="#" class="hover:text-yellow-600"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="hover:text-yellow-600"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="hover:text-yellow-600"><i class="fab fa-twitter"></i></a>
+
       </div>
 
     </div>
@@ -25,7 +25,7 @@
   <header class="shadow-sm sticky top-0 z-50 bg-white">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <!-- Logo -->
-      <a href="#" class="text-2xl font-bold text-yellow-600 tracking-wide">
+      <a href="/" class="text-2xl font-bold text-yellow-600 tracking-wide">
         RV<span class="text-gray-800">Jewellers</span>
       </a>
 
@@ -40,14 +40,9 @@
 
       <!-- Icons -->
       <div class="flex items-center gap-4">
-        <button class="hidden md:block text-gray-600 hover:text-yellow-600">
-          <i class="fas fa-search text-lg"></i>
-        </button>
-        {{-- <a href="#" class="relative text-gray-600 hover:text-yellow-600">
-          <i class="fas fa-shopping-cart text-lg"></i>
-          <span class="absolute -top-1 -right-2 bg-yellow-500 text-white text-xs px-1 rounded-full">2</span>
-        </a> --}}
-        <a href="#" class="text-gray-600 hover:text-yellow-600">
+
+
+        <a href="{{route('login')}}" class="text-gray-600 hover:text-yellow-600">
           <i class="fas fa-user text-lg"></i>
         </a>
 
