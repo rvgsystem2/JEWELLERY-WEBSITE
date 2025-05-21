@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AboutFeatureController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProfileController;
 
@@ -19,13 +20,17 @@ use App\Http\Controllers\FrontController;
 
 Route::get('/', [FrontController::class, 'index'])->name('home');
 Route::get('/about', [FrontController::class, 'about'])->name('about');
-Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
+Route::get('/contactt', [FrontController::class, 'contact'])->name('contact');
 Route::get('/detail', [FrontController::class, 'detail'])->name('detail');
 Route::get('/product', [FrontController::class, 'product'])->name('product');
 Route::get('/gallery', [FrontController::class, 'gallery'])->name('gallery');
     Route::get('product/details/{product}',[FrontController::class,'detail'])->name('product.details');
 
+// contact form submission
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/contact/delete/{id}', [ContactController::class, 'delete'])->name('contact.delete');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth','verified'])->name('dashboard');
 
