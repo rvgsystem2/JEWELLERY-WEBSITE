@@ -9,15 +9,34 @@
   </section>
 
   <!-- Our Story -->
-  <section class="py-16 px-4 bg-white">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-      <img src="https://cdn.pixabay.com/photo/2021/12/29/23/46/jewellery-6902967_1280.jpg" alt="Our Story" class="w-full rounded-lg shadow-lg">
-      <div>
-        <h2 class="text-3xl font-bold text-yellow-700 mb-4">Our Story</h2>
-        <p class="text-gray-700 leading-relaxed">Royal Jewels began as a family-run boutique with a passion for exquisite craftsmanship and timeless design. For over two decades, we've been adorning generations with elegance, blending traditional artistry with modern trends to create heirloom-quality jewelry.</p>
-      </div>
+
+    {{-- about -us --}}
+
+    <div class="container mx-auto px-8 py-12 max-w-full rounded-lg">
+        @forelse ($abouts as $about)
+            <div class="flex flex-col md:flex-row items-center bg-white  overflow-hidden">
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ $about->title }}</h2>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        {{ $about->sub_title }}
+                    </p>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        {{ $about->description }}
+                    </p>
+                    <a href="{{ route('about') }}"
+                        class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-1">Learn
+                        More</a>
+                </div>
+                <div class="md:w-1/2 rounded-lg">
+                    <img src="{{ asset('storage/' . $about->image) }}" alt="Chain links representing connection"
+                        class="w-full h-full object-cover rounded-xl">
+                </div>
+            </div>
+        @empty
+            <p class="text-gray-600 mb-6 text-lg">No about us information available.</p>
+        @endforelse
     </div>
-  </section>
+
 
   <!-- Vision & Mission -->
   <section class="bg-yellow-50 py-16 px-4">
@@ -26,11 +45,13 @@
       <div class="grid md:grid-cols-2 gap-10 text-left">
         <div class="bg-white p-6 rounded-xl shadow-md">
           <h3 class="text-xl font-semibold mb-2 text-yellow-700">Our Vision</h3>
-          <p class="text-gray-700">To be the leading jewelry brand recognized for innovation, elegance, and exceptional customer experience worldwide.</p>
+          <p class="text-gray-700">Our vision is to become a globally recognized jewelry brand known for authenticity, innovation, and trust. We aspire to inspire elegance and empower self-expression through ethically sourced, masterfully crafted pieces that last generations.</p>
         </div>
         <div class="bg-white p-6 rounded-xl shadow-md">
           <h3 class="text-xl font-semibold mb-2 text-yellow-700">Our Mission</h3>
-          <p class="text-gray-700">To craft jewelry that celebrates life's special moments with beauty and grace, while maintaining integrity, quality, and trust.</p>
+          <p class="text-gray-700">Our mission is to craft timeless jewelry that celebrates life's special moments. We are committed to providing exquisite designs, exceptional quality, and personalized service—making every customer feel valued, confident, and connected to the beauty they wear.
+
+            .</p>
         </div>
       </div>
     </div>
@@ -60,12 +81,4 @@
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="bg-yellow-100 py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-yellow-800 mb-4">Join Our Journey</h2>
-      <p class="text-gray-700 mb-6">Whether you're looking for a perfect gift or something for yourself, Royal Jewels has something truly special for everyone. Explore our collections today.</p>
-      <a href="{{route('product')}}" class="inline-block bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-700 transition">Explore Collections</a>
-    </div>
-  </section>
 @endsection

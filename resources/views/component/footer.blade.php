@@ -1,12 +1,12 @@
 <!-- Professional Footer -->
-<footer class="bg-amber-600 text-gray-100">
+<footer class="bg-[#CA8A04] text-gray-100">
     <!-- Top Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
         <!-- Company Info -->
         <div>
-          <h3 class="text-white text-lg font-semibold mb-4">R V jewellers</h3>
+          <a href="/"><h3 class="text-white text-lg font-semibold mb-4">R V jewellers</h3></a>
           <div class="flex items-start mb-3">
             <svg class="h-5 w-5 mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
@@ -35,23 +35,23 @@
         <div>
           <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white transition">Home</a></li>
-            <li><a href="#" class="hover:text-white transition">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition">Services</a></li>
-            <li><a href="#" class="hover:text-white transition">Products</a></li>
-            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+            <li><a href="/" class="hover:text-white transition">Home</a></li>
+            <li><a href="{{route('about')}}" class="hover:text-white transition">About Us</a></li>
+            <li><a href="{{route('gallery')}}" class="hover:text-white transition">Gallery</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Products</a></li>
+            <li><a href="{{route('contact')}}" class="hover:text-white transition">Contact</a></li>
           </ul>
         </div>
 
         <!-- Services -->
         <div>
-          <h3 class="text-white text-lg font-semibold mb-4">Our Services</h3>
+          <h3 class="text-white text-lg font-semibold mb-4">Products</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white transition">Web Development</a></li>
-            <li><a href="#" class="hover:text-white transition">Mobile Apps</a></li>
-            <li><a href="#" class="hover:text-white transition">UI/UX Design</a></li>
-            <li><a href="#" class="hover:text-white transition">Digital Marketing</a></li>
-            <li><a href="#" class="hover:text-white transition">Consulting</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Necklaces</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Rings</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">EarRings</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Bracelets</a></li>
+            <li><a href="{{route('product')}}" class="hover:text-white transition">Bangles</a></li>
           </ul>
         </div>
 
@@ -72,7 +72,7 @@
 
     <!-- Bottom Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-      <p class="text-sm">&copy; 2025 R V jewelers. All rights reserved.</p>
+      <p class="text-sm">&copy; 2025 R V jewellers. All rights reserved.</p>
       <div class="flex space-x-5">
         <!-- Facebook -->
         <a href="https://www.facebook.com/people/Rvjewellers/100065329246578/" class="hover:text-white transition" aria-label="Facebook">

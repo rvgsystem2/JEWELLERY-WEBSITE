@@ -31,7 +31,8 @@ class FrontController extends Controller
     }
     public function about()
     {
-        return view('front.about');
+        $abouts = About::latest()->get();
+        return view('front.about', compact('abouts'));
     }
     public function detail(Product $product){
 

@@ -69,13 +69,24 @@
 
 
   <!-- Map Section -->
-  <section class="px-4 pb-16 max-w-7xl mx-auto">
-    <h2 class="text-2xl font-semibold text-yellow-800 mb-4">Our Location</h2>
-    <div class="rounded-2xl overflow-hidden shadow-lg">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609730266!2d72.74109976427457!3d19.082197839073226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8a3e0e915f%3A0x1dbf3b05fdcbe3c!2sZaveri%20Bazaar!5e0!3m2!1sen!2sin!4v1629876543210!5m2!1sen!2sin"
-        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+  <section class="py-12 px-4 sm:px-6  max-w-full mx-auto">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-yellow-800 mb-6 md:mb-8 text-center">Our Location</h2>
+
+      <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+        <div class="aspect-w-full aspect-h-9 w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.4314375575996!2d84.1520871!3d25.7563094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992652120e73bc3%3A0x9ae8b9ceb2ba7298!2sR.V%20Jewellers!5e0!3m2!1sen!2sin!4v1747809762418!5m2!1sen!2sin"
+            class="w-full h-full min-h-[300px] md:min-h-[400px]"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Google Map showing location of R.V Jewellers"
+            title="R.V Jewellers Location"
+          ></iframe>
+        </div>
+
+      </div>
     </div>
   </section>
 
