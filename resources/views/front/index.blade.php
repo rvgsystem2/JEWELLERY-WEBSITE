@@ -102,33 +102,31 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Product Card 1 -->
             @forelse ($products as $product)
-                
-             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="{{ asset('storage/' . $product->image) }}" alt="Premium Gold Necklace"
-                        
-                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                    <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
-                     {{ $product->tag }}
+                <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="{{ asset('storage/' . $product->image) }}" alt="Premium Gold Necklace"
+                            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
+                            {{ $product->tag }}
+                        </div>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ $product->name }}</h3>
+                        <div class="flex items-center mb-2">
+
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">{{ $product->sort_description }}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-900"> ₹ {{ $product->price }} /--</span>
+                            <a href="{{ route('product.details', $product->id) }}">
+                                <button
+                                    class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="p-4 flex flex-col flex-grow">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ $product->name }}</h3>
-                    <div class="flex items-center mb-2">
-                      
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">{{ $product->sort_description }}</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-xl font-bold text-gray-900"> ₹ {{ $product->price }} /--</span>
-                        <a href="{{ route('product.details', $product->id) }}">
-                            <button
-                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
-                                View Details
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
             @empty
                 <p class="text-gray-500">No products found.</p>
@@ -138,15 +136,15 @@
 
         <!-- View More Button -->
         <div class="text-center mt-12">
-           <a href="{{route('product')}}"><button
-                class="px-8 py-3 border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white rounded-full font-medium transition-all duration-300 inline-flex items-center">
-                View All Product
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd" />
-                </svg>
-            </button></a>
+            <a href="{{ route('product') }}"><button
+                    class="px-8 py-3 border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white rounded-full font-medium transition-all duration-300 inline-flex items-center">
+                    View All Product
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button></a>
         </div>
     </div>
 
@@ -341,11 +339,12 @@
                                     class="text-gray-600 hover:text-amber-600 transition-colors duration-300"
                                     aria-label="Facebook - Rvjewellers">
                                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326
-                                          24h11.494v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788
-                                          4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.919.001c-1.504
-                                          0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403
-                                          24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
+                                        <path
+                                            d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326
+                                                                  24h11.494v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788
+                                                                  4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.919.001c-1.504
+                                                                  0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403
+                                                                  24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
                                     </svg>
                                 </a>
 
@@ -359,7 +358,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </a>
-                           
+
                             </div>
                         </div>
                     </div>
@@ -367,8 +366,9 @@
 
                 <!-- Contact Form -->
                 <div class="w-full lg:w-2/3 bg-white shadow-xl rounded-2xl p-8">
-                    <form action="#" method="POST" class="space-y-6">
+                    <form id="contactForm" method="POST" data-url="{{ route('contact.store') }}" class="space-y-6">
                         @csrf
+
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -378,9 +378,9 @@
                             </div>
 
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number
                                     *</label>
-                                <input type="email" id="email" name="email" required
+                                <input type="phone" id="phone" name="phone" required
                                     class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-amber-500 focus:border-transparent focus:outline-none transition duration-200">
                             </div>
                         </div>
@@ -398,17 +398,88 @@
                         </div>
 
                         <div class="flex items-center justify-center">
-
-                            <button type="submit"
-                                class="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2">
-                                Send Message
+                            <button id="submitBtn" type="submit"
+                                class="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 flex items-center justify-center"
+                                disabled>
+                                <svg id="loader" class="animate-spin hidden h-5 w-5 mr-2 text-white"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10"
+                                        stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                                    </path>
+                                </svg>
+                                <span id="submitText">Send Message</span>
                             </button>
+
                         </div>
                     </form>
+
+
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contactForm");
+            const submitBtn = document.getElementById("submitBtn");
+            const loader = document.getElementById("loader");
+            const submitText = document.getElementById("submitText");
+
+            submitBtn.disabled = false; // re-enable on page load
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+
+                submitBtn.disabled = true;
+                loader.classList.remove("hidden");
+                submitText.textContent = "Sending...";
+
+                const formData = new FormData(form);
+                const submitUrl = form.getAttribute("data-url");
+
+                fetch(submitUrl, {
+                        method: "POST",
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                            'Accept': 'application/json'
+                        },
+                        body: formData
+                    })
+                    .then(async response => {
+                        if (!response.ok) {
+                            const err = await response.json();
+                            throw new Error(Object.values(err.errors).flat().join('\n'));
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        Swal.fire({
+                            title: "Message Sent!",
+                            text: data.message || "Thank you for contacting us.",
+                            icon: "success",
+                            confirmButtonColor: "#f59e0b"
+                        });
+                        form.reset();
+                    })
+                    .catch(error => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: error.message || "Something went wrong. Please try again.",
+                            icon: "error",
+                            confirmButtonColor: "#e11d48"
+                        });
+                    })
+                    .finally(() => {
+                        loader.classList.add("hidden");
+                        submitText.textContent = "Send Message";
+                        submitBtn.disabled = false;
+                    });
+            });
+        });
+    </script>
+
 
 
     <!-- JavaScript -->
