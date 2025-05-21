@@ -38,7 +38,9 @@ class FrontController extends Controller
         return view('front.product');
     }
     public function gallery(){
-        return view('front.gallery');
+        $collections = collection::latest()->get();
+        $categories = Category::latest()->get();
+        return view('front.gallery',compact('collections', 'categories'));
     }
 
 }

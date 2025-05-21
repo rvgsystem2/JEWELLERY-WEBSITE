@@ -103,7 +103,8 @@
             <!-- Product Card 1 -->
             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
                 <div class="relative h-48 overflow-hidden">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Premium Gold Necklace"
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
+                        alt="Premium Gold Necklace"
                         class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
@@ -115,28 +116,35 @@
                         <div class="flex text-yellow-400">
                             <!-- Star icons -->
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">24 reviews</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone
+                        accents.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-gray-900">$299.99</span>
                         <a href="{{ route('detail') }}">
-                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                            <button
+                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                                 View Details
                             </button>
                         </a>
@@ -147,7 +155,8 @@
             <!-- Repeat similar structure for other products -->
             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
                 <div class="relative h-48 overflow-hidden">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Silver Charm Bracelet"
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
+                        alt="Silver Charm Bracelet"
                         class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     <div class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
                         SALE
@@ -158,28 +167,35 @@
                     <div class="flex items-center mb-2">
                         <div class="flex text-yellow-400">
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">42 reviews</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable charm options.</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable
+                        charm options.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-gray-900">$149.99</span>
                         <a href="{{ route('detail') }}">
-                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                            <button
+                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                                 View Details
                             </button>
                         </a>
@@ -189,7 +205,8 @@
 
             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
                 <div class="relative h-48 overflow-hidden">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Premium Gold Necklace"
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
+                        alt="Premium Gold Necklace"
                         class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
@@ -201,28 +218,35 @@
                         <div class="flex text-yellow-400">
                             <!-- Star icons -->
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">24 reviews</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone
+                        accents.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-gray-900">$299.99</span>
                         <a href="{{ route('detail') }}">
-                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                            <button
+                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                                 View Details
                             </button>
                         </a>
@@ -233,7 +257,8 @@
             <!-- Repeat similar structure for other products -->
             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
                 <div class="relative h-48 overflow-hidden">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Silver Charm Bracelet"
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
+                        alt="Silver Charm Bracelet"
                         class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     <div class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
                         SALE
@@ -244,28 +269,35 @@
                     <div class="flex items-center mb-2">
                         <div class="flex text-yellow-400">
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">42 reviews</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable charm options.</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable
+                        charm options.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-gray-900">$149.99</span>
                         <a href="{{ route('detail') }}">
-                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                            <button
+                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                                 View Details
                             </button>
                         </a>
@@ -275,7 +307,8 @@
 
             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
                 <div class="relative h-48 overflow-hidden">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Premium Gold Necklace"
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
+                        alt="Premium Gold Necklace"
                         class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
@@ -287,28 +320,35 @@
                         <div class="flex text-yellow-400">
                             <!-- Star icons -->
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">24 reviews</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone
+                        accents.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-gray-900">$299.99</span>
                         <a href="{{ route('detail') }}">
-                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                            <button
+                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                                 View Details
                             </button>
                         </a>
@@ -319,7 +359,8 @@
             <!-- Repeat similar structure for other products -->
             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
                 <div class="relative h-48 overflow-hidden">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Silver Charm Bracelet"
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
+                        alt="Silver Charm Bracelet"
                         class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     <div class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
                         SALE
@@ -330,28 +371,35 @@
                     <div class="flex items-center mb-2">
                         <div class="flex text-yellow-400">
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">42 reviews</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable charm options.</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable
+                        charm options.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-gray-900">$149.99</span>
                         <a href="{{ route('detail') }}">
-                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                            <button
+                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                                 View Details
                             </button>
                         </a>
@@ -360,7 +408,8 @@
             </div>
             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
                 <div class="relative h-48 overflow-hidden">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Premium Gold Necklace"
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
+                        alt="Premium Gold Necklace"
                         class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     <div class="absolute top-4 right-4 badge-new text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
@@ -372,28 +421,35 @@
                         <div class="flex text-yellow-400">
                             <!-- Star icons -->
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">24 reviews</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone accents.</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Handcrafted 18k gold necklace with premium gemstone
+                        accents.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-gray-900">$299.99</span>
                         <a href="{{ route('detail') }}">
-                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                            <button
+                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                                 View Details
                             </button>
                         </a>
@@ -404,7 +460,8 @@
             <!-- Repeat similar structure for other products -->
             <div class="bg-white rounded-xl card-shadow overflow-hidden h-full flex flex-col shadow-xl">
                 <div class="relative h-48 overflow-hidden">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg" alt="Silver Charm Bracelet"
+                    <img src="https://cdn.pixabay.com/photo/2015/02/06/03/28/jewelry-625725_1280.jpg"
+                        alt="Silver Charm Bracelet"
                         class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     <div class="absolute top-4 right-4 badge-sale text-white text-xs font-bold px-2 py-1 rounded-full">
                         SALE
@@ -415,28 +472,35 @@
                     <div class="flex items-center mb-2">
                         <div class="flex text-yellow-400">
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                             </svg>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">42 reviews</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable charm options.</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elegant sterling silver bracelet with customizable
+                        charm options.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-gray-900">$149.99</span>
                         <a href="{{ route('detail') }}">
-                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                            <button
+                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                                 View Details
                             </button>
                         </a>
@@ -446,15 +510,18 @@
 
         </div>
 
-  <!-- View More Button -->
-  <div class="text-center mt-12">
-    <button class="px-8 py-3 border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white rounded-full font-medium transition-all duration-300 inline-flex items-center">
-      View All Collections
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-      </svg>
-    </button>
-  </div>
+        <!-- View More Button -->
+        <div class="text-center mt-12">
+            <button
+                class="px-8 py-3 border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white rounded-full font-medium transition-all duration-300 inline-flex items-center">
+                View All Collections
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
     </div>
 
 
@@ -525,51 +592,54 @@
 
 
     <!--OUR COLLECTION Tabs Filter Section -->
-  <section class="py-12 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Jewellery Collection</h2>
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Jewellery Collection</h2>
 
-    <!-- Tabs -->
-    <div class="flex flex-wrap justify-center gap-3 mb-10">
-      <button class="tab-btn px-4 py-2 bg-amber-500 text-white rounded-full active-tab" data-category="all">All</button>
-      @foreach ($collections->unique('category') as $tab)
-        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300"
-                data-category="{{ strtolower($tab->category) }}">
-          {{ ucfirst($tab->category) }}
-        </button>
-      @endforeach
-    </div>
-
-  <!-- Grid of all images from collections -->
-<div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="productGrid">
-  @foreach ($collections as $collection)
-    @php
-        $images = array_values(array_filter(explode(',', $collection->image ?? '')));
-    @endphp
-
-    @foreach (array_slice($images, 1) as $img)
-      @if (!empty($img))
-        <div class="product-card" data-category="{{ strtolower($collection->category) }}">
-          <div class="bg-white rounded-xl shadow-md hover:shadow-lg overflow-hidden transition-all duration-300">
-            <img src="{{ asset('storage/' . $img) }}" alt="{{ $collection->title }}"
-                 class="w-full h-56 object-cover">
-
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-gray-800 truncate">{{ $collection->title }}</h3>
-              <p class="text-sm text-gray-500">₹ {{ $collection->price }}</p>
+            <!-- Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button class="tab-btn px-4 py-2 bg-amber-500 text-white rounded-full active-tab"
+                    data-category="all">All</button>
+                @foreach ($collections->unique('category') as $tab)
+                    <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300"
+                        data-category="{{ strtolower($tab->category) }}">
+                        {{ ucfirst($tab->category) }}
+                    </button>
+                @endforeach
             </div>
-          </div>
+
+            <!-- Grid of all images from collections -->
+            <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="productGrid">
+                @foreach ($collections as $collection)
+                    @php
+                        $images = array_values(array_filter(explode(',', $collection->image ?? '')));
+                    @endphp
+
+                    @foreach (array_slice($images, 1) as $img)
+                        @if (!empty($img))
+                            <div class="product-card" data-category="{{ strtolower($collection->category) }}">
+                                <div
+                                    class="bg-white rounded-xl shadow-md hover:shadow-lg overflow-hidden transition-all duration-300">
+                                    <img src="{{ asset('storage/' . $img) }}" alt="{{ $collection->title }}"
+                                        class="w-full h-56 object-cover">
+
+                                    <div class="p-4">
+                                        <h3 class="text-lg font-semibold text-gray-800 truncate">{{ $collection->title }}
+                                        </h3>
+                                        <p class="text-sm text-gray-500">₹ {{ $collection->price }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                @endforeach
+            </div>
+
+
         </div>
-      @endif
-    @endforeach
-  @endforeach
-</div>
+    </section>
 
-
-  </div>
-</section>
-
-{{-- CONTACT US --}}
+    {{-- CONTACT US --}}
     <section class="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="max-w-4xl mx-auto text-center mb-12">
@@ -597,7 +667,8 @@
                             </div>
                             <div class="ml-4">
                                 <h4 class="text-lg font-medium text-gray-800">Our Address</h4>
-                                <p class="mt-1 text-gray-600"> Vijay Cinema Rd, Japlin Ganj, Bahadurpur, Ballia, Uttar Pradesh 277001 </p>
+                                <p class="mt-1 text-gray-600"> Vijay Cinema Rd, Japlin Ganj, Bahadurpur, Ballia, Uttar
+                                    Pradesh 277001 </p>
                             </div>
                         </div>
 
@@ -639,19 +710,18 @@
                         <div class="pt-4">
                             <h4 class="sr-only text-lg font-medium text-gray-800 mb-3">Follow Us</h4>
                             <div class="flex space-x-4">
-                            <a href="https://www.facebook.com/people/Rvjewellers/100065329246578/"
-                                target="_blank" rel="noopener noreferrer"
-                                class="text-gray-600 hover:text-amber-600 transition-colors duration-300"
-                                aria-label="Facebook - Rvjewellers">
-                               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                 <path
-                                   d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326
-                                      24h11.494v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788
-                                      4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.919.001c-1.504
-                                      0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403
-                                      24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"/>
-                               </svg>
-                            </a>
+                                <a href="https://www.facebook.com/people/Rvjewellers/100065329246578/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-gray-600 hover:text-amber-600 transition-colors duration-300"
+                                    aria-label="Facebook - Rvjewellers">
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326
+                                          24h11.494v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788
+                                          4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.919.001c-1.504
+                                          0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403
+                                          24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
+                                    </svg>
+                                </a>
 
                                 <a href="#"
                                     class="text-gray-600 hover:text-amber-800 transition-colors duration-300">
