@@ -26,7 +26,7 @@
   <meta name="twitter:image" content="https://rvjewellersballia.in/storage/abouts/mMorgbMkm2mhTfuiaPtkq2Ha6I63t5ATQPReVbpd.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="{{asset('asset/img/rv.png')}}" href="/favicon.png" />
+  <link rel="icon" type="image/" href="{{asset('asset/img/rv.png')}}" />
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">

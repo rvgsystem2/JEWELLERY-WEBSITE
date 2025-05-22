@@ -82,10 +82,10 @@
                     Call Now
                 </a>
 
-                <button id="buyNow"
+                <a href="https://wa.me/919876543210"><button id="buyNow"
                         class="border border-amber-600 text-amber-600 hover:bg-amber-50 font-semibold py-3 px-6 rounded-xl shadow transition duration-300">
-                    Buy Now
-                </button>
+                  Whatsapp
+                </button></a>
             </div>
         </div>
     </div>

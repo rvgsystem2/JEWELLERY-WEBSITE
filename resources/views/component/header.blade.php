@@ -18,7 +18,7 @@
       </div>
 
     </div>
-  </div>
+</div>
 
 
   <!-- Main Header -->
@@ -30,12 +30,19 @@
       </a>
 
       <!-- Navigation -->
+      {{-- <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+        <a href="/" class="hover:text-yellow-600 transition nav-link ">Home</a>
+        <a href="{{route('gallery')}}" class="hover:text-yellow-600 transition nav-link">Gallery</a>
+        <a href="{{route('product')}}" class="hover:text-yellow-600 transition nav-link">Products</a>
+        <a href="{{route('about')}}" class="hover:text-yellow-600 transition nav-link">About Us</a>
+        <a href="{{route('contact')}}" class="hover:text-yellow-600 transition nav-link">Contact</a>
+      </nav> --}}
       <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
-        <a href="/" class="hover:text-yellow-600 transition">Home</a>
-        <a href="{{route('gallery')}}" class="hover:text-yellow-600 transition">Gallery</a>
-        <a href="{{route('product')}}" class="hover:text-yellow-600 transition">Products</a>
-        <a href="{{route('about')}}" class="hover:text-yellow-600 transition">About Us</a>
-        <a href="{{route('contact')}}" class="hover:text-yellow-600 transition">Contact</a>
+        <a href="/" class="hover:text-yellow-600 transition {{ request()->is('/') ? 'text-yellow-600' : 'text-gray-800' }}">Home</a>
+        <a href="{{route('gallery')}}" class="hover:text-yellow-600 transition {{ request()->routeIs('gallery') ? 'text-yellow-600' : 'text-gray-800' }}">Gallery</a>
+        <a href="{{route('product')}}" class="hover:text-yellow-600 transition {{ request()->routeIs('product') ? 'text-yellow-600' : 'text-gray-800' }}">Products</a>
+        <a href="{{route('about')}}" class="hover:text-yellow-600 transition {{ request()->routeIs('about') ? 'text-yellow-600' : 'text-gray-800' }}">About Us</a>
+        <a href="{{route('contact')}}" class="hover:text-yellow-600 transition {{ request()->routeIs('contact') ? 'text-yellow-600' : 'text-gray-800' }}">Contact</a>
       </nav>
 
       <!-- Icons -->
@@ -54,13 +61,20 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-white shadow-md">
+    {{-- <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-white shadow-md">
       <a href="/" class="block py-2 text-gray-700 hover:text-yellow-600">Home</a>
       <a href="{{route('gallery')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Gallery</a>
       <a href="{{route('product')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Products</a>
       <a href="{{route('about')}}" class="block py-2 text-gray-700 hover:text-yellow-600">About Us</a>
       <a href="{{route('contact')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Contact</a>
-    </div>
+    </div> --}}
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-white shadow-md">
+        <a href="/" class="block py-2 {{ request()->is('/') ? 'text-yellow-600' : 'text-gray-700' }} hover:text-yellow-600">Home</a>
+        <a href="{{route('gallery')}}" class="block py-2 {{ request()->routeIs('gallery') ? 'text-yellow-600' : 'text-gray-700' }} hover:text-yellow-600">Gallery</a>
+        <a href="{{route('product')}}" class="block py-2 {{ request()->routeIs('product') ? 'text-yellow-600' : 'text-gray-700' }} hover:text-yellow-600">Products</a>
+        <a href="{{route('about')}}" class="block py-2 {{ request()->routeIs('about') ? 'text-yellow-600' : 'text-gray-700' }} hover:text-yellow-600">About Us</a>
+        <a href="{{route('contact')}}" class="block py-2 {{ request()->routeIs('contact') ? 'text-yellow-600' : 'text-gray-700' }} hover:text-yellow-600">Contact</a>
+      </div>
   </header>
 
   <script>
@@ -68,4 +82,6 @@
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('hidden');
     });
+
+
   </script>
