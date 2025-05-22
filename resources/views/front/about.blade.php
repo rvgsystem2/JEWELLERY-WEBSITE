@@ -27,9 +27,7 @@
                     <p class="text-gray-600 mb-6 text-lg">
                         {{ $about->description }}
                     </p>
-                    <a href="{{ route('about') }}"
-                        class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-1">Learn
-                        More</a>
+
                 </div>
 
             </div>

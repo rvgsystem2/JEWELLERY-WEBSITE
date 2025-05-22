@@ -1,19 +1,19 @@
 
   <!-- Top Bar -->
  <!-- Responsive Top Bar -->
-<div class="bg-gray-100 text-sm">
+<div class="bg-amber-500 text-sm">
     <div class="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
 
       <!-- Contact Info -->
-      <div class="flex flex-col sm:flex-row items-center gap-2 text-gray-700">
-        <span><i class="fas fa-phone-alt mr-1 text-gray-600"></i> +91 98765 43210</span>
-        <span><i class="fas fa-envelope mr-1 text-gray-600"></i> info@victoryjewels.com</span>
+      <div class="flex flex-col sm:flex-row items-center gap-2 text-gray-50">
+        <a href="tel:+919876543210"></a><span><i class="fas fa-phone-alt mr-1 text-gray-50"></i> +919876543210</span>
+        <span><i class="fas fa-envelope mr-1 text-gray-50"></i> info@rvjewellers.com</span>
       </div>
 
       <!-- Social Icons -->
-      <div class="flex justify-center md:justify-end items-center gap-3 text-gray-600">
-        <a href="#" class="hover:text-yellow-600"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="hover:text-yellow-600"><i class="fab fa-instagram"></i></a>
+      <div class="flex justify-center md:justify-end items-center gap-3 text-gray-50">
+        <a href="https://www.facebook.com/people/Rvjewellers/100065329246578/" class="hover:text-yellow-600"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/aajayballia90/?g=5" class="hover:text-yellow-600"><i class="fab fa-instagram"></i></a>
 
       </div>
 
