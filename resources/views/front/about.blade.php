@@ -1,21 +1,19 @@
 @extends('component.main')
 @section('content')
+    <!-- Hero Section -->
+    <section class="bg-yellow-50 py-20 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-yellow-700 mb-4">About Jewellers</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">Discover the story, mission, and people behind the sparkle.</p>
+    </section>
 
-
-  <!-- Hero Section -->
-  <section class="bg-yellow-50 py-20 px-4 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-yellow-700 mb-4">About Jewellers</h1>
-    <p class="text-gray-600 max-w-2xl mx-auto">Discover the story, mission, and people behind the sparkle.</p>
-  </section>
-
-  <!-- Our Story -->
+    <!-- Our Story -->
 
     {{-- about -us --}}
 
     <div class="container mx-auto px-8 py-12 max-w-full rounded-lg">
         @forelse ($abouts as $about)
             <div class="flex flex-col md:flex-row items-center bg-white  overflow-hidden">
-                 <div class="md:w-1/2 rounded-lg">
+                <div class="md:w-1/2 rounded-lg">
                     <img src="{{ asset('storage/' . $about->image) }}" alt="Chain links representing connection"
                         class="w-full h-full object-cover rounded-xl">
                 </div>
@@ -37,71 +35,108 @@
     </div>
 
 
-  <!-- Vision & Mission -->
-  <section class="bg-yellow-50 py-16 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-yellow-700 mb-6">Our Vision & Mission</h2>
-      <div class="grid md:grid-cols-2 gap-10 text-left">
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold mb-2 text-yellow-700">Our Vision</h3>
-          <p class="text-gray-700">Our vision is to become a globally recognized jewelry brand known for authenticity, innovation, and trust. We aspire to inspire elegance and empower self-expression through ethically sourced, masterfully crafted pieces that last generations.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold mb-2 text-yellow-700">Our Mission</h3>
-          <p class="text-gray-700">Our mission is to craft timeless jewelry that celebrates life's special moments. We are committed to providing exquisite designs, exceptional quality, and personalized service—making every customer feel valued, confident, and connected to the beauty they wear.
+    <!-- Vision & Mission -->
+    <section class="bg-yellow-50 py-16 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-yellow-700 mb-6">Our Vision & Mission</h2>
+            <div class="grid md:grid-cols-2 gap-10 text-left">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-700">Our Vision</h3>
+                    <p class="text-gray-700">Our vision is to become a globally recognized jewelry brand known for
+                        authenticity, innovation, and trust. We aspire to inspire elegance and empower self-expression
+                        through ethically sourced, masterfully crafted pieces that last generations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-700">Our Mission</h3>
+                    <p class="text-gray-700">Our mission is to craft timeless jewelry that celebrates life's special
+                        moments. We are committed to providing exquisite designs, exceptional quality, and personalized
+                        service—making every customer feel valued, confident, and connected to the beauty they wear.
 
-            .</p>
+                        .</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    {{-- partner institution --}}
+
+    <div
+        class="max-w-sm mx-auto bg-amber-600 my-8 text-white rounded-md px-6 py-3 font-semibold uppercase tracking-wide shadow-md text-center">
+        Partner Institution
     </div>
-  </section>
-
-{{-- partner institution --}}
-
-<div class="max-w-sm mx-auto bg-amber-600 my-8 text-white rounded-md px-6 py-3 font-semibold uppercase tracking-wide shadow-md text-center">
-    Partner Institution
-  </div>
-<div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 text-gray-800 my-8">
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-12">
+    {{-- card1 --}}
+    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 text-gray-800 my-8">
 
 
-    <div class="flex items-center space-x-4 mb-4">
-      <img
-        src="https://cdn.pixabay.com/photo/2019/03/17/12/57/phone-4060860_1280.jpg"
-        alt="Umarawati Clinic Logo"
-        class="w-20 h-20 rounded-full object-cover border-2 border-amber-500"
-      />
-      <div>
-        <h1 class="text-2xl font-bold text-amber-600">Umarawati Clinic</h1>
-        <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Dr. Manoj Kumar Verma, MBBS</h2>
-      </div>
+        <div class="flex items-center space-x-4 mb-4">
+            <img src="https://cdn.pixabay.com/photo/2019/03/17/12/57/phone-4060860_1280.jpg" alt="Umarawati Clinic Logo"
+                class="w-20 h-20 rounded-full object-cover border-2 border-amber-500" />
+            <div>
+                <h1 class="text-2xl font-bold text-amber-600">Umarawati Clinic</h1>
+                <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Dr. Manoj Kumar Verma, MBBS</h2>
+            </div>
+        </div>
+        <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
+        <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
     </div>
-    <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
-    <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
-  </div>
+    {{-- card2 --}}
+    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 text-gray-800 my-8">
 
 
-  <!-- Our Team -->
-  <section class="py-16 px-4 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-yellow-700 text-center mb-12">Meet Our Team</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
-        <div>
-          <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Founder" class="mx-auto w-28 h-28 rounded-full mb-4">
-          <h4 class="text-xl font-semibold">Anita Kapoor</h4>
-          <p class="text-gray-500 text-sm">Founder & Creative Director</p>
+        <div class="flex items-center space-x-4 mb-4">
+            <img src="https://cdn.pixabay.com/photo/2019/03/17/12/57/phone-4060860_1280.jpg" alt="Umarawati Clinic Logo"
+                class="w-20 h-20 rounded-full object-cover border-2 border-amber-500" />
+            <div>
+                <h1 class="text-2xl font-bold text-amber-600">Umarawati Clinic</h1>
+                <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Dr. Manoj Kumar Verma, MBBS</h2>
+            </div>
         </div>
-        <div>
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Designer" class="mx-auto w-28 h-28 rounded-full mb-4">
-          <h4 class="text-xl font-semibold">Rahul Sharma</h4>
-          <p class="text-gray-500 text-sm">Lead Designer</p>
-        </div>
-        <div>
-          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Marketing" class="mx-auto w-28 h-28 rounded-full mb-4">
-          <h4 class="text-xl font-semibold">Sonia Mehta</h4>
-          <p class="text-gray-500 text-sm">Marketing Head</p>
-        </div>
-      </div>
+        <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
+        <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
     </div>
-  </section>
+    {{-- card3 --}}
+    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 text-gray-800 my-8">
 
+
+        <div class="flex items-center space-x-4 mb-4">
+            <img src="https://cdn.pixabay.com/photo/2019/03/17/12/57/phone-4060860_1280.jpg" alt="Umarawati Clinic Logo"
+                class="w-20 h-20 rounded-full object-cover border-2 border-amber-500" />
+            <div>
+                <h1 class="text-2xl font-bold text-amber-600">Umarawati Clinic</h1>
+                <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Dr. Manoj Kumar Verma, MBBS</h2>
+            </div>
+        </div>
+        <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
+        <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
+    </div>
+
+   </div>
+
+    <!-- Our Team -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-yellow-700 text-center mb-12">Meet Our Team</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Founder"
+                        class="mx-auto w-28 h-28 rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Anita Kapoor</h4>
+                    <p class="text-gray-500 text-sm">Founder & Creative Director</p>
+                </div>
+                <div>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Designer"
+                        class="mx-auto w-28 h-28 rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Rahul Sharma</h4>
+                    <p class="text-gray-500 text-sm">Lead Designer</p>
+                </div>
+                <div>
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Marketing"
+                        class="mx-auto w-28 h-28 rounded-full mb-4">
+                    <h4 class="text-xl font-semibold">Sonia Mehta</h4>
+                    <p class="text-gray-500 text-sm">Marketing Head</p>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection

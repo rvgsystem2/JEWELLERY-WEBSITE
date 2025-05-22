@@ -165,6 +165,10 @@
     <div class="container mx-auto px-8 py-12 max-w-full rounded-lg">
         @forelse ($abouts as $about)
             <div class="flex flex-col md:flex-row items-center bg-white  overflow-hidden">
+                <div class="md:w-1/2 rounded-lg">
+                    <img src="{{ asset('storage/' . $about->image) }}" alt="Chain links representing connection"
+                        class="w-full h-full object-cover rounded-xl">
+                </div>
                 <div class="md:w-1/2 p-8 md:p-12">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ $about->title }}</h2>
                     <p class="text-gray-600 mb-6 text-lg">
@@ -177,10 +181,7 @@
                         class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-1">Learn
                         More</a>
                 </div>
-                <div class="md:w-1/2 rounded-lg">
-                    <img src="{{ asset('storage/' . $about->image) }}" alt="Chain links representing connection"
-                        class="w-full h-full object-cover rounded-xl">
-                </div>
+
             </div>
         @empty
             <p class="text-gray-600 mb-6 text-lg">No about us information available.</p>
