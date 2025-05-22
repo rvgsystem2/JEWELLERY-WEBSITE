@@ -10,20 +10,20 @@
   <meta name="keywords" content="RV Jewellers, Gold Jewellery, Diamond Jewellery, Bridal Jewellery, Indian Jewellery, Kanpur Jewellers, Buy Gold Online" />
   <meta name="author" content="RV Jewellers" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.rvjewellers.com/" />
+  <link rel="canonical" href="https://rvjewellersballia.in/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="RV Jewellers | Elegant Gold & Diamond Jewellery" />
   <meta property="og:description" content="Shop from a premium collection of gold, diamond, and bridal jewellery. Quality you can trust." />
-  <meta property="og:image" content="https://www.rvjewellers.com/images/banner.jpg" />
-  <meta property="og:url" content="https://www.rvjewellers.com/" />
+  <meta property="og:image" content="https://rvjewellersballia.in/storage/banners/3cD2Un5ERM32Xs9QkQeERJRnNrOYmH8ltRlCyUKO.png" />
+  <meta property="og:url" content="https://rvjewellersballia.in/" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RV Jewellers | Elegant Gold & Diamond Jewellery" />
   <meta name="twitter:description" content="Discover exclusive gold and diamond jewellery collections. Trusted by thousands." />
-  <meta name="twitter:image" content="https://www.rvjewellers.com/images/banner.jpg" />
+  <meta name="twitter:image" content="https://rvjewellersballia.in/storage/abouts/mMorgbMkm2mhTfuiaPtkq2Ha6I63t5ATQPReVbpd.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" type="{{asset('asset/img/rv.png')}}" href="/favicon.png" />
