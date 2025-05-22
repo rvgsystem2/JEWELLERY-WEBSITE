@@ -57,6 +57,30 @@
     </div>
   </section>
 
+{{-- partner institution --}}
+
+<div class="max-w-sm mx-auto bg-amber-600 my-8 text-white rounded-md px-6 py-3 font-semibold uppercase tracking-wide shadow-md text-center">
+    Partner Institution
+  </div>
+<div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 text-gray-800 my-8">
+
+
+    <div class="flex items-center space-x-4 mb-4">
+      <img
+        src="https://cdn.pixabay.com/photo/2019/03/17/12/57/phone-4060860_1280.jpg"
+        alt="Umarawati Clinic Logo"
+        class="w-20 h-20 rounded-full object-cover border-2 border-amber-500"
+      />
+      <div>
+        <h1 class="text-2xl font-bold text-amber-600">Umarawati Clinic</h1>
+        <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Dr. Manoj Kumar Verma, MBBS</h2>
+      </div>
+    </div>
+    <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
+    <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
+  </div>
+
+
   <!-- Our Team -->
   <section class="py-16 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
