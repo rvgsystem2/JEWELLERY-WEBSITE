@@ -26,7 +26,7 @@
   <meta name="twitter:image" content="https://www.rvjewellers.com/images/banner.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" type="{{asset('asset/img/rv.png')}}" href="/favicon.png" />
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">

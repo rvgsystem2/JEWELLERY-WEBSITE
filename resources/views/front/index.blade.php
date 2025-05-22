@@ -73,6 +73,15 @@
                             class="mx-auto mb-4">
                         <h3 class="text-lg font-semibold text-gray-800">{{ $category->name }}</h3>
                         <p class="text-sm text-gray-500 mt-1">{{ $category->title }}</p>
+                        <div class="my-2 flex justify-center">
+                            <a href="tel: 8707656944"><button class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md flex items-center gap-2 transition duration-300">
+                              <span class="material-symbols-outlined text-white">
+                                call
+                              </span>
+                              Inquiry Now
+                            </button></a>
+                          </div>
+
                     </div>
 
                 @empty
