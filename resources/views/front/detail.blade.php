@@ -58,7 +58,8 @@
             </div>
 
             <!-- Price -->
-            <div class="mb-4">
+            <div class="mb-4 flex flex-row gap-2">
+                <h2 class="text-base text-gray-800 font-bold">Price started with</h2>
                 <span class="text-2xl text-amber-600 font-semibold">₹{{ $product->price }}</span>
             </div>
 
