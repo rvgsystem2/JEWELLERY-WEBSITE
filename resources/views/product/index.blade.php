@@ -80,10 +80,10 @@
                             <div class="flex justify-between items-center mt-4">
                                 <a href="{{ route('product.edit', $product->id) }}"
                                     class="text-sm text-blue-600 hover:text-blue-800 font-semibold">Edit</a>
-                                <form action="{{ route('product.delete', $product->id) }}" method="POST"
+                                <form action="{{ route('product.delete', $product->id) }}" method="get"
                                     onsubmit="return confirm('Are you sure?');">
                                     @csrf
-                                    @method('DELETE')
+                                    {{-- @method('DELETE') --}}
                                     <button type="submit"
                                         class="text-sm text-red-600 hover:text-red-800 font-semibold">
                                         Delete
