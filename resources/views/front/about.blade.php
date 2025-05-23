@@ -64,17 +64,20 @@
         class="max-w-sm mx-auto bg-amber-600 my-8 text-white rounded-md px-6 py-3 font-semibold uppercase tracking-wide shadow-md text-center">
         Partner Institution
     </div>
-   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-12">
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 px-2">
     {{-- card1 --}}
     <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 text-gray-800 my-8">
 
 
         <div class="flex items-center space-x-4 mb-4">
-            <img src="https://cdn.pixabay.com/photo/2019/03/17/12/57/phone-4060860_1280.jpg" alt="Umarawati Clinic Logo"
+            <img src="https://cdn.pixabay.com/photo/2019/06/17/17/57/stethoscope-4280497_1280.jpg" alt="Umarawati Clinic Logo"
                 class="w-20 h-20 rounded-full object-cover border-2 border-amber-500" />
             <div>
                 <h1 class="text-2xl font-bold text-amber-600">Umarawati Clinic</h1>
-                <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Dr. Manoj Kumar Verma, MBBS</h2>
+
+                <h1 class="text-gray-700 mt-1"><strong>Name:</strong> Dr. Manoj Kumar Verma</h1>
+                <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Physician</h2>
+
             </div>
         </div>
         <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
@@ -85,31 +88,19 @@
 
 
         <div class="flex items-center space-x-4 mb-4">
-            <img src="https://cdn.pixabay.com/photo/2019/03/17/12/57/phone-4060860_1280.jpg" alt="Umarawati Clinic Logo"
+            <img src="https://cdn.pixabay.com/photo/2019/06/17/17/57/stethoscope-4280497_1280.jpg" alt="Umarawati Clinic Logo"
                 class="w-20 h-20 rounded-full object-cover border-2 border-amber-500" />
             <div>
-                <h1 class="text-2xl font-bold text-amber-600">Umarawati Clinic</h1>
-                <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Dr. Manoj Kumar Verma, MBBS</h2>
+                <h1 class="text-2xl font-bold text-amber-600">R V jewellers</h1>
+                <h1><strong>Name:</strong> RadheShayam ji Vidyashankar sarafa</h1>
+
+                <h2 class="text-gray-700 mt-1"><strong>Designation:</strong></h2>
             </div>
         </div>
         <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
         <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
     </div>
-    {{-- card3 --}}
-    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 text-gray-800 my-8">
 
-
-        <div class="flex items-center space-x-4 mb-4">
-            <img src="https://cdn.pixabay.com/photo/2019/03/17/12/57/phone-4060860_1280.jpg" alt="Umarawati Clinic Logo"
-                class="w-20 h-20 rounded-full object-cover border-2 border-amber-500" />
-            <div>
-                <h1 class="text-2xl font-bold text-amber-600">Umarawati Clinic</h1>
-                <h2 class="text-gray-700 mt-1"><strong>Designation:</strong> Dr. Manoj Kumar Verma, MBBS</h2>
-            </div>
-        </div>
-        <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
-        <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
-    </div>
 
    </div>
 
@@ -119,10 +110,10 @@
             <h2 class="text-3xl font-bold text-yellow-700 text-center mb-12">Meet Our Team</h2>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
                 <div>
-                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Founder"
+                    <img src="{{asset('asset/img/founder.jpg')}}" alt="Founder"
                         class="mx-auto w-28 h-28 rounded-full mb-4">
-                    <h4 class="text-xl font-semibold">Anita Kapoor</h4>
-                    <p class="text-gray-500 text-sm">Founder & Creative Director</p>
+                    <h4 class="text-xl font-semibold">Mr.Ajay kumar verma</h4>
+                    <p class="text-gray-500 text-sm">Founder & Director</p>
                 </div>
                 <div>
                     <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Designer"
