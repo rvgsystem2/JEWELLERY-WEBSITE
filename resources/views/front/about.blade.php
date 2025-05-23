@@ -96,7 +96,7 @@
                 <h2 class="text-gray-700 mt-1"><strong>Designation:</strong></h2>
             </div>
         </div>
-        <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
+        <p class="mb-2"><strong>Address:</strong> Ganesh Market,Ocdenganj Ballia</p>
 
     </div>
 
