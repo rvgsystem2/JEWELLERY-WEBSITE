@@ -88,7 +88,7 @@
 
 
         <div class="flex items-center space-x-4 mb-4">
-            <img src="https://cdn.pixabay.com/photo/2019/06/17/17/57/stethoscope-4280497_1280.jpg" alt="Umarawati Clinic Logo"
+            <img src="https://cdn.pixabay.com/photo/2012/11/19/07/09/ring-66598_1280.jpg" alt="Umarawati Clinic Logo"
                 class="w-20 h-20 rounded-full object-cover border-2 border-amber-500" />
             <div>
                 <h1 class="text-2xl font-bold text-amber-600">R V jewellers</h1>
@@ -116,10 +116,10 @@
                     <p class="text-gray-500 text-sm">Founder & Director</p>
                 </div>
                 <div>
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Designer"
+                    <img src="{{asset('asset/img/founder2.jpg')}}" alt="Designer"
                         class="mx-auto w-28 h-28 rounded-full mb-4">
-                    <h4 class="text-xl font-semibold">Rahul Sharma</h4>
-                    <p class="text-gray-500 text-sm">Lead Designer</p>
+                    <h4 class="text-xl font-semibold">Mr.Amit kumar verma</h4>
+                    <p class="text-gray-500 text-sm">Founder & Director</p>
                 </div>
                 <div>
                     <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Marketing"

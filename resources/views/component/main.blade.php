@@ -26,7 +26,7 @@
   <meta name="twitter:image" content="{{ asset('rv.png') }}" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/" href="{{asset('logo.png')}}" class="text-black font-bold bg-amber-500" />
+  <link rel="icon" type="image/" href="{{asset('asset/img/logo.jpg')}}" class="text-black font-bold bg-amber-500" />
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
