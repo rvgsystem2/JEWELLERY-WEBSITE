@@ -72,21 +72,27 @@
             </div>
 
             <!-- Call & Buy Now Buttons -->
-            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-                <a href="tel:+919876543210"
-                   class="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-6 rounded-xl shadow transition flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                              d="M3 5a2 2 0 012-2h2a1 1 0 011 1v3a1 1 0 01-1 1H6v2c0 4.418 3.582 8 8 8h2v-2a1 1 0 011-1h3a1 1 0 011 1v2a2 2 0 01-2 2h-2c-7.18 0-13-5.82-13-13V6a1 1 0 011-1z"/>
-                    </svg>
-                    Call Now
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-4 mb-6">
+                <!-- Call Now Button -->
+                <a href="tel:+918707656944"
+                   class="flex items-center justify-center w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-6 rounded-xl shadow transition duration-300">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3 5a2 2 0 012-2h2a1 1 0 011 1v3a1 1 0 01-1 1H6v2c0 4.418 3.582 8 8 8h2v-2a1 1 0 011-1h3a1 1 0 011 1v2a2 2 0 01-2 2h-2c-7.18 0-13-5.82-13-13V6a1 1 0 011-1z"/>
+                  </svg>
+                  Call Now
                 </a>
 
-                <a href="https://wa.me/919876543210"><button id="buyNow"
-                        class="border border-amber-600 text-amber-600 hover:bg-amber-50 font-semibold py-3 px-6 rounded-xl shadow transition duration-300">
-                  Whatsapp
-                </button></a>
-            </div>
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/918707656944" target="_blank" rel="noopener noreferrer"
+                   class="w-full sm:w-auto">
+                  <button id="buyNow"
+                          class="w-full sm:w-auto border border-amber-600 text-amber-600 hover:bg-amber-50 font-semibold py-3 px-6 rounded-xl shadow transition duration-300">
+                    Whatsapp
+                  </button>
+                </a>
+              </div>
+
         </div>
     </div>
 </div>

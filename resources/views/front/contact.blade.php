@@ -32,7 +32,7 @@
 
                 <div>
                     <h3 class="font-semibold text-lg">Address</h3>
-                    <p class="text-gray-600">Vijay Cinema Rd, Japlin Ganj, Bahadurpur, Ballia, Uttar Pradesh 277001
+                    <p class="text-gray-600">Chowk Vijay Cinema Road, Ballia
                     </p>
                 </div>
             </div>

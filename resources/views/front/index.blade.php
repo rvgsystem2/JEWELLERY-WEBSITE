@@ -301,8 +301,7 @@
                             </div>
                             <div class="ml-4">
                                 <h4 class="text-lg font-medium text-gray-800">Our Address</h4>
-                                <p class="mt-1 text-gray-600"> Vijay Cinema Rd, Japlin Ganj, Bahadurpur, Ballia, Uttar
-                                    Pradesh 277001 </p>
+                                <p class="mt-1 text-gray-600"> Chowk Vijay Cinema Road, Ballia </p>
                             </div>
                         </div>
 
