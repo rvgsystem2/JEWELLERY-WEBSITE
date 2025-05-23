@@ -81,7 +81,6 @@
             </div>
         </div>
         <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
-        <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
     </div>
     {{-- card2 --}}
     <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 text-gray-800 my-8">
@@ -98,7 +97,7 @@
             </div>
         </div>
         <p class="mb-2"><strong>Address:</strong> Baleshwar Mandir Road, Near Durga Temple, Ballia, Uttar Pradesh</p>
-        <p><strong>Contact:</strong> <a href="tel:8933990146" class="text-amber-600 hover:underline">8933990146</a></p>
+    
     </div>
 
 
