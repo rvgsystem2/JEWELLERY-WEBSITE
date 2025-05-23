@@ -336,7 +336,7 @@
                                 <a href="tel:8707656944" class="mt-1 text-amber-600 hover:text-amber-800">8707656944</a>
                                 <br>
                                 <a href="tel:9389859821" class="mt-1 text-amber-600 hover:text-amber-800">9389859821</a>
-                                <p class="mt-1 text-gray-500 text-sm">Mon-Fri, 9am-5pm PST</p>
+                                <p class="mt-1 text-gray-500 text-sm">Mon-Sat, 10:30am-8:30pm <br> Sunday, 12:00am-7:00pm</p>
                             </div>
                         </div>
 
