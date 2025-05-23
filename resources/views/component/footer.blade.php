@@ -73,7 +73,7 @@
     <!-- Bottom Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
       <p class="text-sm">&copy; 2025 R V jewellers. </p>
-      <span>Design and Developed by <a href="https://realvictorygroups.com/" class="hover:underline">Real Victory Groups</a></span>
+      <span class="text-sm">Design and Developed by <a href="https://realvictorygroups.com/" class="hover:underline">Real Victory Groups</a></span>
       <div class="flex space-x-5">
         <!-- Facebook -->
         <a href="https://www.facebook.com/people/Rvjewellers/100065329246578/" class="hover:text-white transition" aria-label="Facebook">
