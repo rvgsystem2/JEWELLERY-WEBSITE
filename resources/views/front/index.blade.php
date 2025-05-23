@@ -318,7 +318,7 @@
                             <div class="ml-4">
                                 <h4 class="text-lg font-medium text-gray-800">Email Us</h4>
                                 <a href="mailto:contact@example.com"
-                                    class="mt-1 text-amber-600 hover:text-amber-800">contact@example.com</a>
+                                    class="mt-1 text-amber-600 hover:text-amber-800">aajayballia86@gmail.com</a>
                                 <p class="mt-1 text-gray-500 text-sm">Typically replies within 24 hours</p>
                             </div>
                         </div>
@@ -335,6 +335,7 @@
                             <div class="ml-4">
                                 <h4 class="text-lg font-medium text-gray-800">Call Us</h4>
                                 <a href="tel:8707656944" class="mt-1 text-amber-600 hover:text-amber-800">8707656944</a>
+                                <br>
                                 <a href="tel:9389859821" class="mt-1 text-amber-600 hover:text-amber-800">9389859821</a>
                                 <p class="mt-1 text-gray-500 text-sm">Mon-Fri, 9am-5pm PST</p>
                             </div>

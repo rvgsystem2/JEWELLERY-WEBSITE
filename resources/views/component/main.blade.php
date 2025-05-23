@@ -15,7 +15,7 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="RV Jewellers | Elegant Gold & Diamond Jewellery" />
   <meta property="og:description" content="Shop from a premium collection of gold, diamond, and bridal jewellery. Quality you can trust." />
-  <meta property="og:image" content="https://rvjewellersballia.in/storage/banners/3cD2Un5ERM32Xs9QkQeERJRnNrOYmH8ltRlCyUKO.png" />
+  <meta property="og:image" content="https://rvjewellersballia.in/storage/jewellery/public/asset/img/poster.jpg" />
   <meta property="og:url" content="https://rvjewellersballia.in/" />
   <meta property="og:type" content="website" />
 
@@ -23,10 +23,10 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RV Jewellers | Elegant Gold & Diamond Jewellery" />
   <meta name="twitter:description" content="Discover exclusive gold and diamond jewellery collections. Trusted by thousands." />
-  <meta name="twitter:image" content="https://rvjewellersballia.in/storage/abouts/mMorgbMkm2mhTfuiaPtkq2Ha6I63t5ATQPReVbpd.jpg" />
+  <meta name="twitter:image" content="https://rvjewellersballia.in/storage/jewellery/public/asset/img/poster.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/" href="{{asset('asset/img/rv.png')}}" />
+  <link rel="icon" type="image/" href="{{asset('asset/img/rv.png')}}" class="text-black font-bold bg-amber-500" />
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">

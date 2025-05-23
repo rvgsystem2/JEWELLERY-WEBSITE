@@ -21,14 +21,13 @@
             <div class="space-y-6 text-gray-700">
                 <div>
                     <h3 class="font-semibold text-lg">Phone</h3>
-                    <p class="text-gray-600">8707656944
-
-                        , 9389859821
+                    <p class="text-gray-600">8707656944</p>
+                    <p class="text-gray-600">9389859821</p>
                 </div>
 
                 <div>
                     <h3 class="font-semibold text-lg">Email</h3>
-                    <p class="text-gray-600">info@royaljewels.com</p>
+                    <p class="text-gray-600">aajayballia86@gmail.com</p>
                 </div>
 
                 <div>

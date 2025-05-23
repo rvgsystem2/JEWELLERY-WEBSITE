@@ -6,8 +6,9 @@
 
       <!-- Contact Info -->
       <div class="flex flex-col sm:flex-row items-center gap-2 text-gray-50">
-        <a href="tel:+919876543210"></a><span><i class="fas fa-phone-alt mr-1 text-gray-50"></i> +919876543210</span>
-        <span><i class="fas fa-envelope mr-1 text-gray-50"></i> info@rvjewellers.com</span>
+        <a href="tel:+918707656944"></a><span><i class="fas fa-phone-alt mr-1 text-gray-50"></i> +918707656944</span>
+                <a href="tel:++919389859821"></a><span><i class="fas fa-phone-alt mr-1 text-gray-50"></i> +919389859821</span>
+        <span><i class="fas fa-envelope mr-1 text-gray-50"></i> aajayballia86@gmail.com</span>
       </div>
 
       <!-- Social Icons -->
