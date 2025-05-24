@@ -33,7 +33,7 @@
                         <input type="text" name="gold_rate"
                             value="{{ old('gold_rate', $rate->gold_rate ?? '') }}"
                             class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-yellow-300"
-                            placeholder="Enter gold rate" required>
+                            placeholder="Enter gold rate" >
                     </div>
 
                     <!-- Silver Rate -->
@@ -42,7 +42,7 @@
                         <input type="text" name="silver_rate"
                             value="{{ old('silver_rate', $rate->silver_rate ?? '') }}"
                             class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-gray-300"
-                            placeholder="Enter silver rate" required>
+                            placeholder="Enter silver rate" >
                     </div>
 
                     <!-- Diamond Rate -->
@@ -51,7 +51,7 @@
                         <input type="text" name="diamond_rate"
                             value="{{ old('diamond_rate', $rate->diamond_rate ?? '') }}"
                             class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
-                            placeholder="Enter diamond rate" required>
+                            placeholder="Enter diamond rate" >
                     </div>
 
                     <!-- Submit Button -->
