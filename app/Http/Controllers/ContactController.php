@@ -29,15 +29,19 @@ class ContactController extends Controller
         'phone' => 'required',
     ]);
 
-    $contact = Contact::create($request->all());
+$contact = Contact::create($request->all());
 
-    Mail::to('admin@example.com')->send(new ContactFormSubmitted($contact));
+Mail::to('admin@example.com')->send(new ContactFormSubmitted($contact));
 
-    // Return different responses for AJAX and normal form
-   return response()->json([
-        'success' => true,
-        'message' => 'Thank you! We will get back to you soon.'
-    ]);
+$adminPhone = '+918423269765';
+$message = urlencode("New Contact Received:\nName: {$contact->name}\nPhone: {$contact->phone}\nSubject: {$contact->subject}\nMessage: {$contact->message}");
+$link = "https://wa.me/{$adminPhone}?text={$message}";
+
+return response()->json([
+    'success' => true,
+    'message' => 'Thank you! We will get back to you soon.',
+    'whatsapp_link' => $link,
+]);
 }
 
     public function delete($id)

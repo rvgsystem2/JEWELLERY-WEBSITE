@@ -462,64 +462,84 @@
     </section>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const form = document.getElementById("contactForm");
-            const submitBtn = document.getElementById("submitBtn");
-            const loader = document.getElementById("loader");
-            const submitText = document.getElementById("submitText");
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const loader = document.getElementById("loader");
+        const submitText = document.getElementById("submitText");
 
-            submitBtn.disabled = false; // re-enable on page load
+        submitBtn.disabled = false; // re-enable on page load
 
-            form.addEventListener("submit", function(e) {
-                e.preventDefault();
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
 
-                submitBtn.disabled = true;
-                loader.classList.remove("hidden");
-                submitText.textContent = "Sending...";
+            submitBtn.disabled = true;
+            loader.classList.remove("hidden");
+            submitText.textContent = "Sending...";
 
-                const formData = new FormData(form);
-                const submitUrl = form.getAttribute("data-url");
+            const formData = new FormData(form);
+            const submitUrl = form.getAttribute("data-url");
 
-                fetch(submitUrl, {
-                        method: "POST",
-                        headers: {
-                            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-                            'Accept': 'application/json'
-                        },
-                        body: formData
-                    })
-                    .then(async response => {
-                        if (!response.ok) {
-                            const err = await response.json();
-                            throw new Error(Object.values(err.errors).flat().join('\n'));
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        Swal.fire({
-                            title: "Message Sent!",
-                            text: data.message || "Thank you for contacting us.",
-                            icon: "success",
-                            confirmButtonColor: "#f59e0b"
-                        });
-                        form.reset();
-                    })
-                    .catch(error => {
-                        Swal.fire({
-                            title: "Error!",
-                            text: error.message || "Something went wrong. Please try again.",
-                            icon: "error",
-                            confirmButtonColor: "#e11d48"
-                        });
-                    })
-                    .finally(() => {
-                        loader.classList.add("hidden");
-                        submitText.textContent = "Send Message";
-                        submitBtn.disabled = false;
+            fetch(submitUrl, {
+                    method: "POST",
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                        'Accept': 'application/json'
+                    },
+                    body: formData
+                })
+               .then(async response => {
+    if (!response.ok) {
+        const err = await response.json();
+
+        let errorMessage = "Something went wrong. Please try again.";
+
+        // ✅ Safe error extraction
+        if (err.errors) {
+            errorMessage = Object.values(err.errors).flat().join('\n');
+        } else if (err.message) {
+            errorMessage = err.message;
+        }
+
+        throw new Error(errorMessage);
+    }
+
+    return response.json();
+})
+
+                .then(data => {
+                    // ✅ Show success popup
+                    Swal.fire({
+                        title: "Message Sent!",
+                        text: data.message || "Thank you for contacting us.",
+                        icon: "success",
+                        confirmButtonColor: "#f59e0b"
                     });
-            });
+
+                    // ✅ Auto open WhatsApp link in new tab
+                    if (data.whatsapp_link) {
+                        window.open(data.whatsapp_link, "_blank");
+                    }
+
+                    form.reset();
+                })
+                .catch(error => {
+                    Swal.fire({
+                        title: "Error!",
+                        text: error.message || "Something went wrong. Please try again.",
+                        icon: "error",
+                        confirmButtonColor: "#e11d48"
+                    });
+                })
+                .finally(() => {
+                    loader.classList.add("hidden");
+                    submitText.textContent = "Send Message";
+                    submitBtn.disabled = false;
+                });
         });
-    </script>
+    });
+</script>
+
 
 
 
