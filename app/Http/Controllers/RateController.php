@@ -43,7 +43,7 @@ class RateController extends Controller
         // Fetch the rate data for editing
         $rate = Rate::findOrFail($id);
        
-        return view('rate.edit', compact('rate'));
+        return view('rate.create', compact('rate'));
     }
 
     public function update(Request $request, $id)
