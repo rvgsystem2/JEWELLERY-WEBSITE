@@ -90,7 +90,7 @@
             <img src="https://cdn.pixabay.com/photo/2012/11/19/07/09/ring-66598_1280.jpg" alt="Umarawati Clinic Logo"
                 class="w-20 h-20 rounded-full object-cover border-2 border-amber-500" />
             <div>
-                <h1 class="text-2xl font-bold text-amber-600">Firm</h1>
+                <h1 class="text-2xl font-bold text-amber-600">Firm Name</h1>
                 <h1><strong></strong> RadheShayam ji Vidyashankar sarafa</h1>
 
                 <h2 class="text-gray-700 mt-1"><strong>Deals:</strong> in diamond,gold,silver jewelleries and gems stone</h2>
