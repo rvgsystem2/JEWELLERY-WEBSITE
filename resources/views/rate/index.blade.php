@@ -31,7 +31,7 @@
 
                 <h4 class="text-xl font-bold text-yellow-700 mb-1">{{ $rate->name }}</h4>
           
-                <p class="text-base text-gray-700 mb-4">Price : ₹{{ $rate->gold_rate }}/ct</p>
+                <p class="text-base text-gray-700 mb-4">Price : ₹{{ $rate->gold_rate }}</p>
 
                 <div class="flex justify-between gap-2">
                     <a href="{{ route('rate.edit', $rate->id) }}"

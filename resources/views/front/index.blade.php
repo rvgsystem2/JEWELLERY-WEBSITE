@@ -73,7 +73,7 @@
                     <h3 class="text-xl font-semibold text-yellow-700 capitalize mb-1">
                         {{ $rate->name }}
                     </h3>
-                    <p class="text-gray-700 text-base font-medium">Price : ₹{{ number_format($rate->gold_rate) }}/g</p>
+                    <p class="text-gray-700 text-base font-medium">Price : ₹{{ number_format($rate->gold_rate) }}</p>
 
                     <!-- Optional: CTA Buttons -->
                     {{-- <div class="mt-4 flex gap-2">
