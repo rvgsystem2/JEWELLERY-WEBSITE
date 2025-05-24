@@ -54,34 +54,48 @@
     </div>
 
 
-  <section class="w-full py-16 bg-gradient-to-b from-yellow-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Today's Jewellery Rates</h2>
-        <p class="text-lg text-gray-600 mb-10">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
+    <section class="py-12 bg-gradient-to-b from-yellow-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-gray-800">Today's Jewellery Rates</h2>
+            <p class="mt-2 text-lg text-gray-600">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
+        </div>
 
-        @forelse($rates as $rate)
-            <div class="mx-auto w-full sm:w-3/4 md:w-1/2 lg:w-2/5 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 space-y-6">
-                <div class="flex justify-between items-center border-b pb-3 border-yellow-300">
-                    <span class="text-lg font-semibold text-yellow-600">Gold Rate</span>
-                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->gold_rate }}/g</span>
-                </div>
+        <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            @forelse ($rates as $rate)
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 p-6">
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-lg font-semibold text-yellow-600">Gold Rate</span>
+                            <span class="text-gray-700 font-bold">₹{{ $rate->gold_rate }}/g</span>
+                        </div>
+                        <div class="w-full h-1 bg-yellow-200 rounded-full"></div>
+                    </div>
 
-                <div class="flex justify-between items-center border-b pb-3 border-gray-300">
-                    <span class="text-lg font-semibold text-gray-600">Silver Rate</span>
-                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->silver_rate }}/g</span>
-                </div>
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-lg font-semibold text-gray-500">Silver Rate</span>
+                            <span class="text-gray-700 font-bold">₹{{ $rate->silver_rate }}/g</span>
+                        </div>
+                        <div class="w-full h-1 bg-gray-200 rounded-full"></div>
+                    </div>
 
-                <div class="flex justify-between items-center border-b pb-1 border-blue-300">
-                    <span class="text-lg font-semibold text-blue-600">Diamond Rate</span>
-                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->diamond_rate }}/ct</span>
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-lg font-semibold text-blue-600">Diamond Rate</span>
+                            <span class="text-gray-700 font-bold">₹{{ $rate->diamond_rate }}/ct</span>
+                        </div>
+                        <div class="w-full h-1 bg-blue-200 rounded-full"></div>
+                    </div>
                 </div>
-            </div>
-        @empty
-            <p class="text-gray-500">No rate available today.</p>
-        @endforelse
+            @empty
+                <div class="col-span-3 text-center text-gray-500">
+                    No rates available today.
+                </div>
+            @endforelse
+        </div>
     </div>
 </section>
-
 
 
     <!-- Jewellery Categories Section -->
@@ -462,84 +476,64 @@
     </section>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("contactForm");
-        const submitBtn = document.getElementById("submitBtn");
-        const loader = document.getElementById("loader");
-        const submitText = document.getElementById("submitText");
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contactForm");
+            const submitBtn = document.getElementById("submitBtn");
+            const loader = document.getElementById("loader");
+            const submitText = document.getElementById("submitText");
 
-        submitBtn.disabled = false; // re-enable on page load
+            submitBtn.disabled = false; // re-enable on page load
 
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
 
-            submitBtn.disabled = true;
-            loader.classList.remove("hidden");
-            submitText.textContent = "Sending...";
+                submitBtn.disabled = true;
+                loader.classList.remove("hidden");
+                submitText.textContent = "Sending...";
 
-            const formData = new FormData(form);
-            const submitUrl = form.getAttribute("data-url");
+                const formData = new FormData(form);
+                const submitUrl = form.getAttribute("data-url");
 
-            fetch(submitUrl, {
-                    method: "POST",
-                    headers: {
-                        'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-                        'Accept': 'application/json'
-                    },
-                    body: formData
-                })
-               .then(async response => {
-    if (!response.ok) {
-        const err = await response.json();
-
-        let errorMessage = "Something went wrong. Please try again.";
-
-        // ✅ Safe error extraction
-        if (err.errors) {
-            errorMessage = Object.values(err.errors).flat().join('\n');
-        } else if (err.message) {
-            errorMessage = err.message;
-        }
-
-        throw new Error(errorMessage);
-    }
-
-    return response.json();
-})
-
-                .then(data => {
-                    // ✅ Show success popup
-                    Swal.fire({
-                        title: "Message Sent!",
-                        text: data.message || "Thank you for contacting us.",
-                        icon: "success",
-                        confirmButtonColor: "#f59e0b"
+                fetch(submitUrl, {
+                        method: "POST",
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                            'Accept': 'application/json'
+                        },
+                        body: formData
+                    })
+                    .then(async response => {
+                        if (!response.ok) {
+                            const err = await response.json();
+                            throw new Error(Object.values(err.errors).flat().join('\n'));
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        Swal.fire({
+                            title: "Message Sent!",
+                            text: data.message || "Thank you for contacting us.",
+                            icon: "success",
+                            confirmButtonColor: "#f59e0b"
+                        });
+                        form.reset();
+                    })
+                    .catch(error => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: error.message || "Something went wrong. Please try again.",
+                            icon: "error",
+                            confirmButtonColor: "#e11d48"
+                        });
+                    })
+                    .finally(() => {
+                        loader.classList.add("hidden");
+                        submitText.textContent = "Send Message";
+                        submitBtn.disabled = false;
                     });
-
-                    // ✅ Auto open WhatsApp link in new tab
-                    if (data.whatsapp_link) {
-                        window.open(data.whatsapp_link, "_blank");
-                    }
-
-                    form.reset();
-                })
-                .catch(error => {
-                    Swal.fire({
-                        title: "Error!",
-                        text: error.message || "Something went wrong. Please try again.",
-                        icon: "error",
-                        confirmButtonColor: "#e11d48"
-                    });
-                })
-                .finally(() => {
-                    loader.classList.add("hidden");
-                    submitText.textContent = "Send Message";
-                    submitBtn.disabled = false;
-                });
+            });
         });
-    });
-</script>
-
+    </script>
 
 
 
