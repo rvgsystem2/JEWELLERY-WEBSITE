@@ -55,82 +55,45 @@
 
 
 
-<section class="w-full py-16 bg-gradient-to-b from-[#fffceb] to-white">
-    <div class="max-w-5xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-extrabold text-gray-800 tracking-tight">Today's Jewellery Rates</h2>
-            <p class="text-lg text-gray-500 mt-2">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-800">Today's Jewellery Rates</h2>
+            <p class="text-gray-500 text-base mt-2">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
         </div>
 
-        <div class="bg-white border border-yellow-100 shadow-2xl rounded-3xl px-8 py-10 md:flex md:justify-between md:items-start space-y-8 md:space-y-0 md:space-x-10">
-            <!-- Gold Rates -->
-            <div class="flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="text-yellow-600 text-2xl"><i class="fas fa-coins"></i></span>
-                    <h3 class="text-2xl font-semibold text-yellow-700">Gold Rates</h3>
-                </div>
-                <ul class="space-y-3 text-lg text-gray-800 font-medium pl-2">
-                    <li class="flex justify-between border-b pb-2">
-                        <span>24kt</span> <span>₹9,808/g</span>
-                    </li>
-                    <li class="flex justify-between border-b pb-2">
-                        <span>22kt</span> <span>₹8,830/g</span>
-                    </li>
-                    <li class="flex justify-between border-b pb-2">
-                        <span>18kt</span> <span>₹7,210/g</span>
-                    </li>
-                    <li class="flex justify-between">
-                        <span>14kt</span> <span>₹5,590/g</span>
-                    </li>
-                </ul>
-            </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            @forelse ($rates as $rate)
+                <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all">
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fas fa-calendar-alt mr-2 text-red-400"></i> 
+                        {{ \Carbon\Carbon::parse($rate->created_at)->format('d M, Y') }}
+                    </div>
 
-            <!-- Divider -->
-            <div class="hidden md:block w-px bg-gray-200"></div>
+                    <h3 class="text-xl font-semibold text-yellow-700 capitalize mb-1">
+                        {{ $rate->name }}
+                    </h3>
+                    <p class="text-gray-700 text-base font-medium">Price : ₹{{ number_format($rate->gold_rate) }}/g</p>
 
-            <!-- Silver Rates -->
-            <div class="flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="text-gray-500 text-2xl"><i class="fas fa-coins"></i></span>
-                    <h3 class="text-2xl font-semibold text-gray-700">Silver Rate</h3>
+                    <!-- Optional: CTA Buttons -->
+                    {{-- <div class="mt-4 flex gap-2">
+                        <a href="#" class="flex-1 bg-blue-500 text-white text-xs font-semibold px-3 py-2 rounded">Buy Now</a>
+                        <a href="#" class="flex-1 bg-red-500 text-white text-xs font-semibold px-3 py-2 rounded">Details</a>
+                    </div> --}}
                 </div>
-                <p class="text-lg text-gray-800 font-medium pl-2">₹99.90/g</p>
-            </div>
+            @empty
+                <div class="col-span-4 text-center text-gray-500 py-10">
+                    No rate available today.
+                </div>
+            @endforelse
         </div>
     </div>
 </section>
 
 
-{{-- <section class="w-full py-16 bg-gradient-to-b from-yellow-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Today's Jewellery Rates</h2>
-        <p class="text-lg text-gray-600 mb-10">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
 
-        @forelse($rates as $rate)
-            <div class="mx-auto w-full sm:w-3/4 md:w-1/2 lg:w-2/5 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 space-y-6">
-                <div class="flex justify-between items-center border-b pb-3 border-yellow-300">
-                    <span class="text-lg font-semibold text-yellow-600">Gold Rate</span>
-                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->gold_rate }}/g</span>
-                </div>
 
-                <div class="flex justify-between items-center border-b pb-3 border-gray-300">
-                    <span class="text-lg font-semibold text-gray-600">Silver Rate</span>
-                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->silver_rate }}/g</span>
-                </div>
 
-                @if ($rate->diamond_rate)
-                    <div class="flex justify-between items-center border-b pb-1 border-gray-300">
-                        <span class="text-lg font-semibold text-gray-600">Diamond Rate</span>
-                        <span class="text-lg font-bold text-gray-800">₹{{ $rate->diamond_rate }}/ct</span>
-                    </div>
-                    
-                @endif
-            </div>
-        @empty
-            <p class="text-gray-500">No rate available today.</p>
-        @endforelse
-    </div>
-</section> --}}
 
 
 

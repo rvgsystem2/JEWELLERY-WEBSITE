@@ -26,9 +26,8 @@ class RateController extends Controller
     {
         // Validate the request data
         $request->validate([
+             'name' => 'required|string|max:255',
             'gold_rate' => 'nullable',
-            'silver_rate' => 'nullable',
-            'diamond_rate' => 'nullable',
         ]);
 
         // Store the rate data in the database
@@ -50,9 +49,10 @@ class RateController extends Controller
     {
         // Validate and update the rate data
         $request->validate([
+            'name' => 'required|string|max:255',
             'gold_rate' => 'nullable',
-            'silver_rate' => 'nullable',
-            'diamond_rate' => 'nullable',
+          
+            
         ]);
 
         $rate = Rate::findOrFail($id);

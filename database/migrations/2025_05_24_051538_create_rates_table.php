@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('rates', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
             $table->string('gold_rate')->nullable();
-            $table->string('silver_rate')->nullable();
-            $table->string('diamond_rate')->nullable();
+
             $table->timestamps();
         });
     }

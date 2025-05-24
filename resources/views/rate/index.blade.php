@@ -29,9 +29,9 @@
                     📅 {{ \Carbon\Carbon::parse($rate->created_at)->format('d M, Y') }}
                 </div>
 
-                <h4 class="text-xl font-bold text-yellow-700 mb-1">Gold: ₹{{ $rate->gold_rate }}/g</h4>
-                <p class="text-base text-gray-700">Silver: ₹{{ $rate->silver_rate }}/g</p>
-                <p class="text-base text-gray-700 mb-4">Diamond: ₹{{ $rate->diamond_rate }}/ct</p>
+                <h4 class="text-xl font-bold text-yellow-700 mb-1">{{ $rate->name }}</h4>
+          
+                <p class="text-base text-gray-700 mb-4">Price : ₹{{ $rate->gold_rate }}/ct</p>
 
                 <div class="flex justify-between gap-2">
                     <a href="{{ route('rate.edit', $rate->id) }}"
