@@ -71,10 +71,13 @@
                     <span class="text-lg font-bold text-gray-800">₹{{ $rate->silver_rate }}/g</span>
                 </div>
 
-                <div class="flex justify-between items-center border-b pb-1 border-blue-300">
-                    <span class="text-lg font-semibold text-blue-600">Diamond Rate</span>
-                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->diamond_rate }}/ct</span>
-                </div>
+                @if ($rate->diamond_rate)
+                    <div class="flex justify-between items-center border-b pb-1 border-gray-300">
+                        <span class="text-lg font-semibold text-gray-600">Diamond Rate</span>
+                        <span class="text-lg font-bold text-gray-800">₹{{ $rate->diamond_rate }}/ct</span>
+                    </div>
+                    
+                @endif
             </div>
         @empty
             <p class="text-gray-500">No rate available today.</p>
