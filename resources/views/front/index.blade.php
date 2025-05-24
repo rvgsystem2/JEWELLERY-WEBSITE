@@ -54,7 +54,54 @@
     </div>
 
 
-<section class="w-full py-16 bg-gradient-to-b from-yellow-50 to-white">
+
+<section class="w-full py-16 bg-gradient-to-b from-[#fffceb] to-white">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-800 tracking-tight">Today's Jewellery Rates</h2>
+            <p class="text-lg text-gray-500 mt-2">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
+        </div>
+
+        <div class="bg-white border border-yellow-100 shadow-2xl rounded-3xl px-8 py-10 md:flex md:justify-between md:items-start space-y-8 md:space-y-0 md:space-x-10">
+            <!-- Gold Rates -->
+            <div class="flex-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-yellow-600 text-2xl"><i class="fas fa-coins"></i></span>
+                    <h3 class="text-2xl font-semibold text-yellow-700">Gold Rates</h3>
+                </div>
+                <ul class="space-y-3 text-lg text-gray-800 font-medium pl-2">
+                    <li class="flex justify-between border-b pb-2">
+                        <span>24kt</span> <span>₹9,808/g</span>
+                    </li>
+                    <li class="flex justify-between border-b pb-2">
+                        <span>22kt</span> <span>₹8,830/g</span>
+                    </li>
+                    <li class="flex justify-between border-b pb-2">
+                        <span>18kt</span> <span>₹7,210/g</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>14kt</span> <span>₹5,590/g</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Divider -->
+            <div class="hidden md:block w-px bg-gray-200"></div>
+
+            <!-- Silver Rates -->
+            <div class="flex-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-gray-500 text-2xl"><i class="fas fa-coins"></i></span>
+                    <h3 class="text-2xl font-semibold text-gray-700">Silver Rate</h3>
+                </div>
+                <p class="text-lg text-gray-800 font-medium pl-2">₹99.90/g</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{-- <section class="w-full py-16 bg-gradient-to-b from-yellow-50 to-white">
     <div class="max-w-7xl mx-auto px-4 text-center">
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Today's Jewellery Rates</h2>
         <p class="text-lg text-gray-600 mb-10">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
@@ -83,7 +130,7 @@
             <p class="text-gray-500">No rate available today.</p>
         @endforelse
     </div>
-</section>
+</section> --}}
 
 
 
