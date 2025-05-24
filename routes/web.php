@@ -133,6 +133,14 @@ Route::middleware('auth')->group(function () {
     Route::get('product/details/delete/{productDetails}',[App\Http\Controllers\ProductDetailsController::class,'delete'])->name('product.details.delete');
     //product details Routes
 
+    // rate Routes  
+    Route::get('rate/index',[App\Http\Controllers\RateController::class,'index'])->name('rate.index');
+    Route::get('rate/create',[App\Http\Controllers\RateController::class,'create'])->name('rate.create');
+    Route::post('rate/store',[App\Http\Controllers\RateController::class,'store'])->name('rate.store');
+    Route::get('rate/edit/{rate}',[App\Http\Controllers\RateController::class,'edit'])->name('rate.edit');
+    Route::post('rate/update/{rate}',[App\Http\Controllers\RateController::class,'update'])->name('rate.update');
+    Route::get('rate/delete/{rate}',[App\Http\Controllers\RateController::class,'delete'])->name('rate.delete');
+
 });
 
 require __DIR__.'/auth.php';

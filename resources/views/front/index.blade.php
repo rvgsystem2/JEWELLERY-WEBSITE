@@ -53,6 +53,37 @@
         </div>
     </div>
 
+
+  <section class="w-full py-16 bg-gradient-to-b from-yellow-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Today's Jewellery Rates</h2>
+        <p class="text-lg text-gray-600 mb-10">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
+
+        @forelse($rates as $rate)
+            <div class="mx-auto w-full sm:w-3/4 md:w-1/2 lg:w-2/5 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 space-y-6">
+                <div class="flex justify-between items-center border-b pb-3 border-yellow-300">
+                    <span class="text-lg font-semibold text-yellow-600">Gold Rate</span>
+                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->gold_rate }}/g</span>
+                </div>
+
+                <div class="flex justify-between items-center border-b pb-3 border-gray-300">
+                    <span class="text-lg font-semibold text-gray-600">Silver Rate</span>
+                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->silver_rate }}/g</span>
+                </div>
+
+                <div class="flex justify-between items-center border-b pb-1 border-blue-300">
+                    <span class="text-lg font-semibold text-blue-600">Diamond Rate</span>
+                    <span class="text-lg font-bold text-gray-800">₹{{ $rate->diamond_rate }}/ct</span>
+                </div>
+            </div>
+        @empty
+            <p class="text-gray-500">No rate available today.</p>
+        @endforelse
+    </div>
+</section>
+
+
+
     <!-- Jewellery Categories Section -->
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4">

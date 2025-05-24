@@ -20,7 +20,8 @@
                     </x-nav-link>
 
                     <!-- Dropdown for Roles, Permissions, Users -->
-                    <div class="relative">
+
+                    {{-- <div class="relative">
                         <button @click="open = !open" class="flex items-center space-x-1 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md">
                             <i class="fas fa-users-cog text-gray-600"></i>
                             <span>Admin Tools</span>
@@ -52,12 +53,15 @@
                             @endcan
 
                         </div>
-                    </div>
+                    </div> --}}
 
                     <x-nav-link :href="route('banner.index')" :active="request()->routeIs('banner*')">
                         <i class="fas fa-image mr-1"></i> Banners
                     </x-nav-link>
 
+                    <x-nav-link :href="route('rate.index')" :active="request()->routeIs('rate*')">
+                        <i class="fas fa-money-bill-wave mr-1"></i> Rates       
+                    </x-nav-link>
                      
                     <x-nav-link :href="route('about.index')" :active="request()->routeIs('about*')">
                         <i class="fas fa-info-circle mr-1"></i> About

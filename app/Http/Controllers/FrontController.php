@@ -8,6 +8,8 @@ use App\Models\Banner;
 use App\Models\Category;
 use App\Models\collection;
 use App\Models\Product;
+use App\Models\Rate;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -21,7 +23,9 @@ class FrontController extends Controller
         $collections = collection::latest()->get();
         $categories = Category::latest()->get();
         $products = Product::latest()->get()->take(8);
-        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories', 'products'));
+           $today = Carbon::today();
+           $rates =Rate::all();
+        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories', 'products','today','rates'));
     }
 
 
