@@ -39,6 +39,11 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
+    <script>
+    const productDetailRoute = "{{ url('product/details') }}";
+</script>
+
+
   <style>
     body { font-family: 'Poppins', sans-serif; }
   </style>

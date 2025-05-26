@@ -30,14 +30,7 @@
         RV<span class="text-gray-800">Jewellers</span>
       </a>
 
-      <!-- Navigation -->
-      {{-- <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
-        <a href="/" class="hover:text-yellow-600 transition nav-link ">Home</a>
-        <a href="{{route('gallery')}}" class="hover:text-yellow-600 transition nav-link">Gallery</a>
-        <a href="{{route('product')}}" class="hover:text-yellow-600 transition nav-link">Products</a>
-        <a href="{{route('about')}}" class="hover:text-yellow-600 transition nav-link">About Us</a>
-        <a href="{{route('contact')}}" class="hover:text-yellow-600 transition nav-link">Contact</a>
-      </nav> --}}
+    
       <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
         <a href="/" class="hover:text-yellow-600 transition {{ request()->is('/') ? 'text-yellow-600' : 'text-gray-800' }}">Home</a>
         <a href="{{route('gallery')}}" class="hover:text-yellow-600 transition {{ request()->routeIs('gallery') ? 'text-yellow-600' : 'text-gray-800' }}">Gallery</a>
@@ -45,6 +38,17 @@
         <a href="{{route('about')}}" class="hover:text-yellow-600 transition {{ request()->routeIs('about') ? 'text-yellow-600' : 'text-gray-800' }}">About Us</a>
         <a href="{{route('contact')}}" class="hover:text-yellow-600 transition {{ request()->routeIs('contact') ? 'text-yellow-600' : 'text-gray-800' }}">Contact</a>
       </nav>
+
+
+      <!-- Search Bar -->
+<div class="relative w-full max-w-xs">
+    <input type="text" id="searchInput" placeholder="Search products..."
+        class="w-full px-4 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500">
+    <!-- Search Result Dropdown -->
+    <div id="searchResults" class="absolute z-50 left-0 w-full mt-1 bg-white border rounded-lg shadow-lg hidden max-h-64 overflow-y-auto">
+        <!-- Results appear here -->
+    </div>
+</div>
 
       <!-- Icons -->
       <div class="flex items-center gap-4">
@@ -61,14 +65,8 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
-    {{-- <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-white shadow-md">
-      <a href="/" class="block py-2 text-gray-700 hover:text-yellow-600">Home</a>
-      <a href="{{route('gallery')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Gallery</a>
-      <a href="{{route('product')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Products</a>
-      <a href="{{route('about')}}" class="block py-2 text-gray-700 hover:text-yellow-600">About Us</a>
-      <a href="{{route('contact')}}" class="block py-2 text-gray-700 hover:text-yellow-600">Contact</a>
-    </div> --}}
+   
+
     <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-white shadow-md">
         <a href="/" class="block py-2 {{ request()->is('/') ? 'text-yellow-600' : 'text-gray-700' }} hover:text-yellow-600">Home</a>
         <a href="{{route('gallery')}}" class="block py-2 {{ request()->routeIs('gallery') ? 'text-yellow-600' : 'text-gray-700' }} hover:text-yellow-600">Gallery</a>
@@ -86,3 +84,45 @@
 
 
   </script>
+
+
+<script>
+    const input = document.getElementById("searchInput");
+    const resultsContainer = document.getElementById("searchResults");
+
+    input.addEventListener("keyup", function () {
+        const query = this.value.trim();
+        if (query.length < 2) {
+            resultsContainer.classList.add("hidden");
+            resultsContainer.innerHTML = '';
+            return;
+        }
+
+        fetch(`/search?query=${query}`)
+            .then(res => res.json())
+            .then(data => {
+                resultsContainer.innerHTML = '';
+                if (data.length === 0) {
+                    resultsContainer.innerHTML = '<p class="p-4 text-sm text-gray-500">No results found</p>';
+                } else {
+                    data.forEach(item => {
+                        const link = `${productDetailRoute}/${item.id}`;
+                        resultsContainer.innerHTML += `
+                            <a href="${link}"
+                                class="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-800 border-b">
+                                <div class="font-semibold">${item.name}</div>
+                                <div class="text-xs text-gray-500">${item.category?.name || 'Uncategorized'} - ₹${item.price}</div>
+                            </a>`;
+                    });
+                }
+                resultsContainer.classList.remove("hidden");
+            });
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
+            resultsContainer.classList.add("hidden");
+        }
+    });
+</script>
+

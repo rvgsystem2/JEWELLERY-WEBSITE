@@ -55,40 +55,36 @@
 
 
 
-<section class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold text-gray-800">Today's Jewellery Rates</h2>
-            <p class="text-gray-500 text-base mt-2">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
-        </div>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800">Today's Jewellery Rates</h2>
+                <p class="text-gray-500 text-base mt-2">Updated on {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}</p>
+            </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            @forelse ($rates as $rate)
-                <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all">
-                    <div class="flex items-center text-sm text-gray-500 mb-4">
-                        <i class="fas fa-calendar-alt mr-2 text-red-400"></i> 
-                        {{ \Carbon\Carbon::parse($rate->created_at)->format('d M, Y') }}
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                @forelse ($rates as $rate)
+                    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all">
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-calendar-alt mr-2 text-red-400"></i>
+                            {{ \Carbon\Carbon::parse($rate->created_at)->format('d M, Y') }}
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-yellow-700 capitalize mb-1">
+                            {{ $rate->name }}
+                        </h3>
+                        <p class="text-gray-700 text-base font-medium">Price : ₹{{ number_format($rate->gold_rate) }}</p>
+
+
                     </div>
-
-                    <h3 class="text-xl font-semibold text-yellow-700 capitalize mb-1">
-                        {{ $rate->name }}
-                    </h3>
-                    <p class="text-gray-700 text-base font-medium">Price : ₹{{ number_format($rate->gold_rate) }}</p>
-
-                    <!-- Optional: CTA Buttons -->
-                    {{-- <div class="mt-4 flex gap-2">
-                        <a href="#" class="flex-1 bg-blue-500 text-white text-xs font-semibold px-3 py-2 rounded">Buy Now</a>
-                        <a href="#" class="flex-1 bg-red-500 text-white text-xs font-semibold px-3 py-2 rounded">Details</a>
-                    </div> --}}
-                </div>
-            @empty
-                <div class="col-span-4 text-center text-gray-500 py-10">
-                    No rate available today.
-                </div>
-            @endforelse
+                @empty
+                    <div class="col-span-4 text-center text-gray-500 py-10">
+                        No rate available today.
+                    </div>
+                @endforelse
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -99,6 +95,7 @@
 
 
     <!-- Jewellery Categories Section -->
+
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
             <!-- Section Title -->
@@ -112,22 +109,25 @@
 
                 <!-- Category 1 -->
                 @forelse ($categories as $category)
-                    <div
-                        class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
-                        <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}"
-                            class="mx-auto mb-4">
-                        <h3 class="text-lg font-semibold text-gray-800">{{ $category->name }}</h3>
-                        <p class="text-sm text-gray-500 mt-1">{{ $category->title }}</p>
-                        <div class="my-2 flex justify-center">
-                            <a href="tel: 8707656944"><button class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md flex items-center gap-2 transition duration-300">
-                              <span class="material-symbols-outlined text-white">
-                                call
-                              </span>
-                              Inquiry Now
-                            </button></a>
-                          </div>
+                    <a href="{{ route('front.category.products', $category->id) }}">
+                        <div
+                            class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 text-center">
+                            <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}"
+                                class="mx-auto mb-4">
+                            <h3 class="text-lg font-semibold text-gray-800">{{ $category->name }}</h3>
+                            <p class="text-sm text-gray-500 mt-1">{{ $category->title }}</p>
+                            <div class="my-2 flex justify-center">
+                                <button
+                                    class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md flex items-center gap-2 transition duration-300">
+                                    <span class="material-symbols-outlined text-white">
+                                        call
+                                    </span>
+                                    Inquiry Now
+                                </button>
+                            </div>
+                        </div>
+                    </a>
 
-                    </div>
 
                 @empty
                     <div class="col-span-1">
@@ -202,6 +202,33 @@
         </div>
     </div>
 
+
+
+    <!-- Our Channel Section -->
+<section class="bg-white py-12">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">📺 Our YouTube Channel</h2>
+        <p class="text-gray-600 mb-6">Watch latest jewellery designs, behind the scenes, and special videos from RV Jewellers.</p>
+
+        <a href="https://youtube.com/@r.vjewellers9955?si=Y14Dqty3PDzsHH2h" target="_blank" rel="noopener"
+            class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-full shadow transition duration-300">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M19.615 3.184A3 3 0 0 1 22 6v12a3 3 0 0 1-2.385 2.816C17.6 21.248 12 21.25 12 21.25s-5.6 0-7.615-.434A3 3 0 0 1 2 18V6a3 3 0 0 1 2.385-2.816C6.4 2.752 12 2.75 12 2.75s5.6 0 7.615.434ZM10 15.5V8.5l6 3.5-6 3.5Z" />
+            </svg>
+            Visit Channel
+        </a>
+
+        <!-- Optional: Embed Latest Video -->
+        
+        <div class="mt-8 max-w-2xl mx-auto">
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.youtube.com/embed/P1hedUzT6L8" frameborder="0" allowfullscreen class="w-full rounded-xl shadow-lg"></iframe>
+            </div>
+        </div>
+    
+    </div>
+</section>
 
 
 
@@ -381,7 +408,8 @@
                                 <a href="tel:8707656944" class="mt-1 text-amber-600 hover:text-amber-800">8707656944</a>
                                 <br>
                                 <a href="tel:9389859821" class="mt-1 text-amber-600 hover:text-amber-800">9389859821</a>
-                                <p class="mt-1 text-gray-500 text-sm">Mon-Sat, 10:30am-8:30pm <br> Sunday, 12:00am-7:00pm</p>
+                                <p class="mt-1 text-gray-500 text-sm">Mon-Sat, 10:30am-8:30pm <br> Sunday, 12:00am-7:00pm
+                                </p>
                             </div>
                         </div>
 
@@ -396,10 +424,10 @@
                                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
                                             d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326
-                                                                  24h11.494v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788
-                                                                  4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.919.001c-1.504
-                                                                  0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403
-                                                                  24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
+                                                                      24h11.494v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788
+                                                                      4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.919.001c-1.504
+                                                                      0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403
+                                                                      24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
                                     </svg>
                                 </a>
 

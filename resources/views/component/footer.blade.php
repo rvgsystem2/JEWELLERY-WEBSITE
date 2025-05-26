@@ -44,14 +44,15 @@
         </div>
 
         <!-- Services -->
+        @php
+          $categories = \App\Models\Category::all();
+        @endphp
         <div>
           <h3 class="text-white text-lg font-semibold mb-4">Products</h3>
           <ul class="space-y-2">
-            <li><a href="{{route('product')}}" class="hover:text-white transition">Necklaces</a></li>
-            <li><a href="{{route('product')}}" class="hover:text-white transition">Rings</a></li>
-            <li><a href="{{route('product')}}" class="hover:text-white transition">EarRings</a></li>
-            <li><a href="{{route('product')}}" class="hover:text-white transition">Bracelets</a></li>
-            <li><a href="{{route('product')}}" class="hover:text-white transition">Bangles</a></li>
+            @foreach ($categories as $category)
+              <li><a href="{{ route('front.category.products', $category->id) }}" class="hover:text-white transition">{{ $category->name }}</a></li>
+            @endforeach
           </ul>
         </div>
 

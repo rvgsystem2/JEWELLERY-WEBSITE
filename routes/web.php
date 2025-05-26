@@ -24,7 +24,10 @@ Route::get('/contactt', [FrontController::class, 'contact'])->name('contact');
 Route::get('/detail', [FrontController::class, 'detail'])->name('detail');
 Route::get('/product', [FrontController::class, 'product'])->name('product');
 Route::get('/gallery', [FrontController::class, 'gallery'])->name('gallery');
-    Route::get('product/details/{product}',[FrontController::class,'detail'])->name('product.details');
+
+Route::get('product/details/{product}',[FrontController::class,'detail'])->name('product.details');
+Route::get('/category/{id}/products', [FrontController::class, 'productsByCategory'])->name('front.category.products');
+Route::get('/search', [FrontController::class, 'search'])->name('search');
 
 // contact form submission
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

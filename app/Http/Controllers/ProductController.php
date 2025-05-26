@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
@@ -18,7 +19,8 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('product.create');
+        $categories = Category::all();
+        return view('product.create', compact('categories'));
     }
     public function store(Request $request)
     {
@@ -31,7 +33,8 @@ class ProductController extends Controller
             'status' => 'required|in:active,inactive',
             'tag' => 'nullable|string|max:255',
             'image' => 'nullable|image|max:2048',
-            'images.*' => 'nullable|image|max:2048'
+            'images.*' => 'nullable|image|max:2048',
+            'category_id' => 'required|exists:categories,id',
         ]);
         // Handle image upload if exists
         if ($request->hasFile('image')) {
@@ -53,7 +56,8 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::findOrFail($id);
-        return view('product.create', compact('product'));
+        $categories = Category::all();
+        return view('product.create', compact('product', 'categories'));
     }
     public function update(Request $request, $id)
     {
@@ -66,7 +70,8 @@ class ProductController extends Controller
             'status' => 'required|in:active,inactive',
             'tag' => 'nullable|string|max:255',
             'image' => 'nullable|image|max:2048',
-            'images.*' => 'nullable|image|max:2048'
+            'images.*' => 'nullable|image|max:2048',
+            'category_id' => 'required|exists:categories,id',
         ]);
 
         $product = Product::findOrFail($id);

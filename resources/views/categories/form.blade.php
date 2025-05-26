@@ -34,13 +34,7 @@
                            class="w-full border px-4 py-2 rounded">
                 </div>
 
-                <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700">Status</label>
-                    <select name="status" class="w-full border px-4 py-2 rounded">
-                        <option value="active" {{ (old('status', $category->status ?? '') === 'active') ? 'selected' : '' }}>Active</option>
-                        <option value="inactive" {{ (old('status', $category->status ?? '') === 'inactive') ? 'selected' : '' }}>Inactive</option>
-                    </select>
-                </div>
+              
 
                 <div class="mb-4">
                     <label class="block text-sm font-medium text-gray-700">Image</label>
@@ -51,7 +45,13 @@
                         </div>
                     @endif
                 </div>
-
+  <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700">Status</label>
+                    <select name="status" class="w-full border px-4 py-2 rounded">
+                        <option value="active" {{ (old('status', $category->status ?? '') === 'active') ? 'selected' : '' }}>Active</option>
+                        <option value="inactive" {{ (old('status', $category->status ?? '') === 'inactive') ? 'selected' : '' }}>Inactive</option>
+                    </select>
+                </div>
                 <button type="submit"
                         class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
                     {{ isset($category) ? 'Update' : 'Create' }}

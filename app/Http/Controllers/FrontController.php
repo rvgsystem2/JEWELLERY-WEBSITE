@@ -28,6 +28,56 @@ class FrontController extends Controller
         return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories', 'products','today','rates'));
     }
 
+public function productsByCategory($id)
+{
+    $category = Category::findOrFail($id);
+    $products = Product::where('category_id', $id)->where('status', 'active')->latest()->get();
+
+    return view('front.category_products', compact('category', 'products'));
+}
+
+public function search(Request $request)
+{
+    $query = $request->input('query');
+
+    if (!$query) {
+        return response()->json([]);
+    }
+
+    $products = Product::with('category')
+        ->where(function ($q) use ($query) {
+            $q->where('name', 'LIKE', "%{$query}%")
+              ->orWhere('tag', 'LIKE', "%{$query}%")
+              ->orWhere('title', 'LIKE', "%{$query}%")
+              ->orWhereHas('category', function ($catQ) use ($query) {
+                  $catQ->where('name', 'LIKE', "%{$query}%");
+              });
+        })
+        ->take(10)
+        ->get();
+
+    return response()->json($products);
+}
+
+
+// public function search(Request $request)
+// {
+//     $query = $request->input('query');
+
+//     if (!$query) {
+//         return response()->json([]);
+//     }
+
+//     $products = Product::where('name', 'LIKE', "%{$query}%")
+//         ->orWhere('tag', 'LIKE', "%{$query}%")
+//         ->orWhere('title', 'LIKE', "%{$query}%")
+//         ->with('category')
+//         ->take(10)
+//         ->get();
+
+//     return response()->json($products);
+// }
+
 
     public function contact()
     {

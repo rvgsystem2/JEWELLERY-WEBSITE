@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->text('images')->nullable();
             $table->string('tag')->nullable();
+           $table->foreignId('category_id')->constrained()->onDelete('cascade'); // 🔗 foreign key
             $table->timestamps();
         });
     }
