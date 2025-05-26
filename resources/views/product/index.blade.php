@@ -69,7 +69,7 @@
                             <h3 class="text-lg font-semibold text-gray-800">{{ $product->name }}</h3>
                             <p class="text-sm text-gray-500 truncate">
                                 {{ $product->sort_description ?? 'No short description' }}</p>
-                            <p class="text-base font-semibold text-red-600">₹{{ $product->price }}  {{ $product->category->name }}</p>
+                            <p class="text-base font-semibold text-red-600">₹{{ $product->price }}  {{ $product->category->name ?? "N/A" }}</p>
                             <div class="flex items-center justify-between mt-2">
                                 <span
                                     class="px-2 py-1 text-xs rounded-full {{ $product->status == 'active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800' }}">
