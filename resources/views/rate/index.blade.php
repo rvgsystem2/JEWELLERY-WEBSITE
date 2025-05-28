@@ -38,7 +38,7 @@
                         class="flex-1 text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-1.5 rounded-lg">
                         ✏️ Edit
                     </a>
-                    <form action="{{ route('rate.delete', $rate->id) }}" method="POST"
+                    <form action="{{ route('rate.delete', $rate->id) }}" method="get"
                           onsubmit="return confirm('Are you sure you want to delete this rate?');"
                           class="flex-1">
                         @csrf
