@@ -21,11 +21,39 @@ class FrontController extends Controller
         $abouts = About::latest()->get();
         $aboutfeatures = AboutFeature::latest()->get();
         $collections = collection::latest()->get();
+        $collections = Collection::latest()->get();
+
+$groupedCollections = $collections->groupBy('category')->map(function ($items) {
+    $images = [];
+
+    foreach ($items as $collection) {
+        $collectionImages = array_values(array_filter(explode(',', $collection->image ?? '')));
+        $collectionImages = array_slice($collectionImages, 1); // skip first if needed
+
+        foreach ($collectionImages as $img) {
+            if (!empty($img)) {
+                $images[] = [
+                    'img' => $img,
+                    'title' => $collection->title,
+                    'price' => $collection->price,
+                    'category' => $collection->category,
+                ];
+            }
+
+            if (count($images) >= 10) break;
+        }
+
+        if (count($images) >= 10) break;
+    }
+
+    return $images;
+});
+
         $categories = Category::latest()->get();
         $products = Product::latest()->get()->take(8);
            $today = Carbon::today();
            $rates =Rate::all();
-        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories', 'products','today','rates'));
+        return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories', 'products','today','rates', 'groupedCollections'));
     }
 
 public function productsByCategory($id)
