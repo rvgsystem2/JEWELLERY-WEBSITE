@@ -298,53 +298,52 @@
 
 
     <!--OUR COLLECTION Tabs Filter Section -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Jewellery Collection</h2>
+ <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Jewellery Collection</h2>
 
-            <!-- Tabs -->
-          <!-- Tabs -->
-<div class="flex flex-wrap justify-center gap-3 mb-10">
-    <button class="tab-btn px-4 py-2 bg-amber-500 text-white rounded-full active-tab" data-category="all">All</button>
-    @foreach ($groupedCollections as $category => $items)
-        <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300"
-            data-category="{{ strtolower($category) }}">
-            {{ ucfirst($category) }}
-        </button>
-    @endforeach
-</div>
-
-<!-- Products Grid -->
-<div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="productGrid">
-    @foreach ($groupedCollections as $category => $items)
-        @foreach ($items as $index => $item)
-            <div class="product-card"
-                data-category="{{ strtolower($category) }}"
-                data-index="{{ $index }}"
-                style="{{ $index >= 10 ? 'display:none;' : '' }}">
-                <div class="bg-white rounded-xl shadow-md hover:shadow-lg overflow-hidden transition-all duration-300">
-                    <img src="{{ asset('storage/' . $item['img']) }}" alt="{{ $item['title'] }}"
-                        class="w-full h-56 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-800 truncate">{{ $item['title'] }}</h3>
-                        <p class="text-sm text-gray-500">₹ {{ $item['price'] }}</p>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-    @endforeach
-</div>
-
-<!-- View More Button -->
-<div class="text-center mt-8">
-    <button id="viewMoreBtn" class="px-6 py-2 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition">View More</button>
-</div>
-
-
-
-
+        <!-- Tabs -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <button class="tab-btn px-4 py-2 bg-amber-500 text-white rounded-full active-tab" data-category="all">All</button>
+            @foreach ($groupedCollections as $category => $items)
+                <button class="tab-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300"
+                    data-category="{{ strtolower($category) }}">
+                    {{ ucfirst($category) }}
+                </button>
+            @endforeach
         </div>
-    </section>
+
+        <!-- Products Grid -->
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="productGrid">
+            @foreach ($groupedCollections as $category => $items)
+                @foreach ($items as $index => $item)
+                    <div class="product-card"
+                        data-category="{{ strtolower($category) }}"
+                        data-index="{{ $index }}"
+                        style="display: {{ $index < 10 ? 'block' : 'none' }};">
+                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg overflow-hidden transition-all duration-300">
+                            <img src="{{ asset('storage/' . $item['img']) }}" alt="{{ $item['title'] }}"
+                                class="w-full h-56 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold text-gray-800 truncate">{{ $item['title'] }}</h3>
+                                <p class="text-sm text-gray-500">₹ {{ $item['price'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @endforeach
+        </div>
+
+        <!-- View More Button -->
+        <div class="text-center mt-8">
+            <button id="viewMoreBtn"
+                class="px-6 py-2 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition">
+                View More
+            </button>
+        </div>
+    </div>
+</section>
+
 
     {{-- CONTACT US --}}
     <section class="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
@@ -570,52 +569,62 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll('.tab-btn');
+        const products = document.querySelectorAll('.product-card');
         const viewMoreBtn = document.getElementById('viewMoreBtn');
+
+        let currentCategory = 'all';
         let showLimit = 10;
 
-        viewMoreBtn.addEventListener("click", function () {
-            showLimit += 10;
+        function updateView() {
+            let visibleCount = 0;
 
-            document.querySelectorAll('.product-card').forEach(card => {
-                let index = parseInt(card.getAttribute('data-index'));
-                if (index < showLimit) {
-                    card.style.display = 'block';
+            products.forEach(product => {
+                const category = product.getAttribute('data-category');
+                const index = parseInt(product.getAttribute('data-index'));
+
+                const isInCategory = currentCategory === 'all' || category === currentCategory;
+
+                if (isInCategory && index < showLimit) {
+                    product.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    product.style.display = 'none';
                 }
             });
 
-            // Hide button if all items are shown
-            const hiddenCards = Array.from(document.querySelectorAll('.product-card')).filter(card => parseInt(card.getAttribute('data-index')) >= showLimit);
-            if (hiddenCards.length === 0) {
-                viewMoreBtn.style.display = 'none';
-            }
-        });
-    });
-</script>
+            const hasMore = Array.from(products).some(product => {
+                const category = product.getAttribute('data-category');
+                const index = parseInt(product.getAttribute('data-index'));
+                return (currentCategory === 'all' || category === currentCategory) && index >= showLimit;
+            });
 
-    <!-- JavaScript -->
-    <script>
-        const tabs = document.querySelectorAll('.tab-btn');
-        const products = document.querySelectorAll('.product-card');
+            viewMoreBtn.style.display = hasMore ? 'inline-block' : 'none';
+        }
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                const category = tab.getAttribute('data-category');
+                currentCategory = tab.getAttribute('data-category');
+                showLimit = 10;
 
-                // Highlight active tab
-                tabs.forEach(btn => btn.classList.remove('bg-gray-800', 'text-white', 'active-tab'));
-                tab.classList.add('bg-gray-800', 'text-white');
+                tabs.forEach(btn => btn.classList.remove('bg-amber-500', 'text-white', 'active-tab'));
+                tab.classList.add('bg-amber-500', 'text-white', 'active-tab');
 
-                // Filter products
-                products.forEach(product => {
-                    if (category === 'all' || product.getAttribute('data-category') === category) {
-                        product.classList.remove('hidden');
-                    } else {
-                        product.classList.add('hidden');
-                    }
-                });
+                updateView();
             });
         });
-    </script>
+
+        viewMoreBtn.addEventListener('click', () => {
+            showLimit += 10;
+            updateView();
+        });
+
+        // Initial load
+        updateView();
+    });
+</script>
+
+
 
 
 
