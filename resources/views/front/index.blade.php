@@ -67,7 +67,7 @@
                     <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all">
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <i class="fas fa-calendar-alt mr-2 text-red-400"></i>
-                            {{ \Carbon\Carbon::parse($rate->created_at)->format('d M, Y') }}
+                            {{ \Carbon\Carbon::parse($today)->format('d M, Y') }}
                         </div>
 
                         <h3 class="text-xl font-semibold text-yellow-700 capitalize mb-1">
