@@ -21,8 +21,7 @@ class FrontController extends Controller
         $abouts = About::latest()->get();
         $aboutfeatures = AboutFeature::latest()->get();
         $collections = collection::latest()->get();
-        $collections = Collection::latest()->get();
-
+     $collections = Collection::latest()->get();
 $groupedCollections = $collections->groupBy('category')->map(function ($items) {
     $images = [];
 
@@ -39,11 +38,7 @@ $groupedCollections = $collections->groupBy('category')->map(function ($items) {
                     'category' => $collection->category,
                 ];
             }
-
-            if (count($images) >= 10) break;
         }
-
-        if (count($images) >= 10) break;
     }
 
     return $images;

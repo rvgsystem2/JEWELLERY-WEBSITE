@@ -317,8 +317,11 @@
 <!-- Products Grid -->
 <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="productGrid">
     @foreach ($groupedCollections as $category => $items)
-        @foreach ($items as $item)
-            <div class="product-card" data-category="{{ strtolower($category) }}">
+        @foreach ($items as $index => $item)
+            <div class="product-card"
+                data-category="{{ strtolower($category) }}"
+                data-index="{{ $index }}"
+                style="{{ $index >= 10 ? 'display:none;' : '' }}">
                 <div class="bg-white rounded-xl shadow-md hover:shadow-lg overflow-hidden transition-all duration-300">
                     <img src="{{ asset('storage/' . $item['img']) }}" alt="{{ $item['title'] }}"
                         class="w-full h-56 object-cover">
@@ -331,6 +334,12 @@
         @endforeach
     @endforeach
 </div>
+
+<!-- View More Button -->
+<div class="text-center mt-8">
+    <button id="viewMoreBtn" class="px-6 py-2 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition">View More</button>
+</div>
+
 
 
 
@@ -495,6 +504,9 @@
         </div>
     </section>
 
+
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const form = document.getElementById("contactForm");
@@ -556,6 +568,29 @@
     </script>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        let showLimit = 10;
+
+        viewMoreBtn.addEventListener("click", function () {
+            showLimit += 10;
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                let index = parseInt(card.getAttribute('data-index'));
+                if (index < showLimit) {
+                    card.style.display = 'block';
+                }
+            });
+
+            // Hide button if all items are shown
+            const hiddenCards = Array.from(document.querySelectorAll('.product-card')).filter(card => parseInt(card.getAttribute('data-index')) >= showLimit);
+            if (hiddenCards.length === 0) {
+                viewMoreBtn.style.display = 'none';
+            }
+        });
+    });
+</script>
 
     <!-- JavaScript -->
     <script>
