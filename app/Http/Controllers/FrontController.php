@@ -48,6 +48,7 @@ $groupedCollections = $collections->groupBy('category')->map(function ($items) {
         $products = Product::latest()->get()->take(8);
            $today = Carbon::today();
            $rates =Rate::all();
+        //    dd($rates);
         return view('front.index', compact('banners', 'abouts', 'aboutfeatures', 'collections', 'categories', 'products','today','rates', 'groupedCollections'));
     }
 

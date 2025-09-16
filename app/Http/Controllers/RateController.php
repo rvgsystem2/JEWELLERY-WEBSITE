@@ -65,6 +65,7 @@ class RateController extends Controller
     {
         // Delete the rate data
         $rate = Rate::findOrFail($id);
+        // dd($rate);
         $rate->delete();
 
         return redirect()->route('rate.index')->with('success', 'Rates deleted successfully.');

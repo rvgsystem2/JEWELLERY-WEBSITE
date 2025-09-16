@@ -42,10 +42,10 @@
                           onsubmit="return confirm('Are you sure you want to delete this rate?');"
                           class="flex-1">
                         @csrf
-                        <button type="submit"
+                        {{-- <button type="submit"
                                 class="w-full bg-red-500 hover:bg-red-600 text-white text-sm font-medium py-1.5 rounded-lg">
                             🗑️ Delete
-                        </button>
+                        </button> --}}
                     </form>
                 </div>
             </div>
