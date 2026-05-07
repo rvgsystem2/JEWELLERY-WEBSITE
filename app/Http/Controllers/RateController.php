@@ -27,7 +27,7 @@ class RateController extends Controller
         // Validate the request data
         $request->validate([
              'name' => 'required|string|max:255',
-            'gold_rate' => 'nullable',
+            'gold_rate' => 'nullable|numeric|min:0',
         ]);
 
         // Store the rate data in the database
@@ -50,7 +50,7 @@ class RateController extends Controller
         // Validate and update the rate data
         $request->validate([
             'name' => 'required|string|max:255',
-            'gold_rate' => 'nullable',
+            'gold_rate' => 'nullable|numeric|min:0',
           
             
         ]);
@@ -61,13 +61,11 @@ class RateController extends Controller
         return redirect()->route('rate.index')->with('success', 'Rates updated successfully.');
     }
 
-    public function delete($id)
-    {
-        // Delete the rate data
-        $rate = Rate::findOrFail($id);
-        // dd($rate);
-        $rate->delete();
+  public function delete(Rate $rate)
+{
+    $rate->delete();
 
-        return redirect()->route('rate.index')->with('success', 'Rates deleted successfully.');
-    }
+    return redirect()->route('rate.index')
+        ->with('success', 'Rate deleted successfully.');
+}
 }
